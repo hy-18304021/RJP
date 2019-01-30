@@ -2,12 +2,12 @@
 
 
 	<servlet>
-		<servlet-name>Kamata</servlet-name>
-		<servlet-class>KamataServlet</servlet-class>
+		<servlet-name>name</servlet-name>
+		<servlet-class>Namepass</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>Kamata</servlet-name>
+		<servlet-name>name</servlet-name>
 		<url-pattern>/mahiro</url-pattern>
 	</servlet-mapping>
 
