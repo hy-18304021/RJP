@@ -10,7 +10,7 @@ import database.InsertTest;
 import database.QueryTest;
 import java.util.List;
 
-public class Namepass extends HttpServlet{
+public class Servlet extends HttpServlet{
 
 	
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
