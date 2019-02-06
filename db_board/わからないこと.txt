@@ -1,0 +1,32 @@
+・どうやってスレッドのリストをjspファイルに送るのか。
+データベースで調べた後、その結果をまたbeansにいれてそれをリストに入れてそれを表示させている。
+while(rs.next()){
+beansに一つずつデータを入れる。
+beansをリストに入れる。
+}
+ってやると該当したデータをリストで返せる。
+
+・どうやってレスのリストをjspファイルに送るのか。
+
+パッケージに入れたファイルはパッケージ名.クラス名で<servlet-class>タグを書く。
+
+
+<!-- 
+	<servlet>
+		<servlet-name></servlet-name>
+		<servlet-class></servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name></servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name></servlet-name>
+		<jsp-file>/</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name></servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+-->

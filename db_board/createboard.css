@@ -1,0 +1,129 @@
+html{
+    margin:0;
+    background-color:rgba(223, 248, 255, 0.96);
+}
+body{
+    margin:0;
+}
+.main{
+    height:auto;
+    width:800px;
+    border:solid 2px #ffffff;
+    margin:0 auto;
+    background-color:white;
+}
+.tema p{
+    margin:0 auto;
+    padding:15px 0 15px 0;
+    text-align:center;
+    background-color:rgba(50, 166, 250, 0.72);
+    width:810px;
+    color:white;
+    font-weight:bolder;
+    font-size:15px;
+}
+
+  
+}
+.form{
+    height:auto;
+    width:auto;
+    margin:0 auto;
+}
+
+input[type="text"],textarea{
+    display:block;
+    height:auto;
+    width:750px;
+    padding:20px 0 20px 0;
+    background-color:rgba(197, 210, 229, 0.67);
+    margin-left:25px;
+    border-radius:5px;
+    border:solid 2px white;
+    
+}
+textarea{
+    margin-top:10px;
+}
+
+.formcontent{
+    margin-top:10px;
+}
+.formcontent p{
+    margin-left:25px;
+    color:rgba(108, 110, 113, 0.92);
+}
+/*
+.formcontent{
+    height:90%;
+    width:90%;
+    border:solid 2px red;
+}*/
+
+button{
+	margin-bottom:15px;
+    display:block;
+    width:300px;
+    height:70px;
+    background-color:rgba(255, 195, 8, 0.72);
+    margin:10px auto;
+    border:solid 1px rgba(255, 195, 8, 0.72);
+    border-radius:5px;
+    box-shadow: 1px 1px;
+    
+}
+button p{
+    font-size:17px;
+    color:white;
+    font-weight:bold;
+}
+
+
+
+
+
+#bg{
+    position:fixed;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    background:rgba(0,0,0,.4);
+}
+#alertBox{
+    margin:250px auto 0;
+    text-align:center;
+    padding-top:25px;
+    width:300px;
+    height:85px;
+    background:#fff;
+    border-radius:5px;
+    box-shadow: 2px 2px rgba(0,0,0,.3);
+}
+.kakunin{
+    font-size:17px;
+    margin-top:0;
+    
+} 
+button[id="ok"],button[id="no"]{
+    display:inline-block;
+    border:4px solid #ffd386;
+    border-radius: 10px;
+    background:#ff753f;
+    color:#ffffff;
+    height:40px;
+    width:100px;
+    margin-top:0;
+    margin-left:0;
+}
+
+.totop img{
+	width:120px;
+	height:120px;
+	
+	position:fixed;
+	bottom:20px;
+	left:20px;
+}
+
+

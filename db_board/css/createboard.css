@@ -1,0 +1,289 @@
+html{
+    margin:0;
+    background-color:#236bee2e;
+}
+body{
+    margin:0;
+	font-family: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.tema{
+	padding-top:200px;
+}
+
+.main{
+    height:auto;
+    width:800px;
+    border:solid 2px #ffffff;
+    margin:0 auto;
+    background-color:white;
+}
+.tema p{
+    margin:0 auto;
+    padding:15px 0 15px 0;
+    text-align:center;
+    background-color:rgba(50, 166, 250, 0.72);
+    width:810px;
+    color:white;
+    font-weight:bolder;
+    font-size:15px;
+}
+
+  
+}
+.form{
+    height:auto;
+    width:auto;
+    margin:0 auto;
+}
+
+input[type="text"],textarea{
+    display:block;
+    height:auto;
+    width:750px;
+    padding:20px 0 20px 0;
+    background-color:rgba(197, 210, 229, 0.67);
+    margin-left:25px;
+    border-radius:5px;
+    border:solid 2px white;
+    
+}
+textarea{
+    margin-top:10px;
+}
+
+.formcontent{
+    margin-top:10px;
+}
+.formcontent p{
+    margin-left:25px;
+    color:rgba(108, 110, 113, 0.92);
+}
+/*
+.formcontent{
+    height:90%;
+    width:90%;
+    border:solid 2px red;
+}*/
+
+button{
+    display:block;
+    width:300px;
+    height:70px;
+    background-color:rgba(255, 195, 8, 0.72);
+    margin:10px auto;
+    border:solid 1px rgba(255, 195, 8, 0.72);
+    border-radius:5px;
+    box-shadow: 1px 1px;
+    
+}
+button p{
+    font-size:17px;
+    color:white;
+    font-weight:bold;
+}
+
+
+
+
+
+#bg{
+    position:fixed;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    background:rgba(0,0,0,.4);
+}
+#alertBox{
+    margin:250px auto 0;
+    text-align:center;
+    padding-top:25px;
+    width:300px;
+    height:85px;
+    background:#fff;
+    border-radius:5px;
+    box-shadow: 2px 2px rgba(0,0,0,.3);
+}
+.kakunin{
+    font-size:17px;
+    margin-top:0;
+    
+} 
+button[id="ok"],button[id="no"]{
+    display:inline-block;
+    border:4px solid #ffd386;
+    border-radius: 10px;
+    background:#ff753f;
+    color:#ffffff;
+    height:40px;
+    width:100px;
+    margin-top:0;
+    margin-left:0;
+}
+
+
+
+
+
+
+.rogo img{
+	
+	width:230px;
+	padding-top:9px;
+}
+.ue{
+	
+	display: flex;
+    justify-content: space-between;
+}
+
+.ue .account{
+	
+	text-align: center;
+
+}
+.account a{
+	
+	text-decoration:none;
+	display:inline-block;
+	
+	
+	
+}
+.sita a{
+	text-decoration:none;
+}
+
+.sita ul{
+	text-align: center;
+}
+.sita ul li {
+    padding: 15px 30px;
+	position:relative;
+	display:inline-block;
+}
+
+.sita ul li:nth-of-type(n+3):after{
+	content:"";
+	width:1px;
+	height:1em;
+	background-color:#000;
+	display:block;
+	position:absolute;
+	left:0;
+	top:50%;
+	transform:translate(0,-50%);
+	
+}
+
+
+
+.sita ul p{
+	margin: 0;
+	
+}
+
+.sita form{
+	
+	display: flex;
+	
+}
+ul{
+	padding: 0;
+}
+li{
+	list-style-type: none;
+	
+}
+
+button{
+	padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+.head{
+
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    width: 100%;
+	z-index:10;
+	border-bottom: 2.5px solid #236bee91;
+	
+
+}
+
+/* .head2{ */
+	/* z-index:10; */
+    /* position: fixed; */
+    /* top: 0; */
+    /* left: 0; */
+    /* width: 100%; */
+    /* background: #fff; */
+	/* display: none; */
+    /* box-shadow: 0 1px 5px #9896b9; */
+	/* border-bottom: 2.5px solid #236bee91; */
+/* } */
+/* .active .head2{ */
+	/* display: block; */
+/* } */
+/* .head.active{ */
+	
+	/* position:fixed; */
+	/* width: 100%; */
+	/* margin:0; */
+/* }	 */
+/* .active .head{ */
+	
+/* } */
+
+
+.content{
+    
+	/* float: right; */
+    
+    
+    background-color:darkgray;
+    
+    width: 25%;
+	
+	height:50%;
+    
+    
+}
+
+.account p{
+	margin:0;
+	padding: 10px 40px;
+	/* border-right: 1px solid #000; */
+	/* border-left: 1px solid #000; */
+	position:relative;
+	
+}
+
+.account a:not(:first-of-type) p:after{
+	content:"";
+	width:1px;
+	height:1em;
+	background-color:#000;
+	display:block;
+	position:absolute;
+	left:0;
+	top:50%;
+	transform:translate(0,-50%);
+	
+}
+
+.totop img{
+	width:120px;
+	height:120px;
+	
+	position:fixed;
+	bottom:20px;
+	left:50px;
+}
+
+
