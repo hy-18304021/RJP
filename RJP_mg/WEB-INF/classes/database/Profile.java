@@ -1,4 +1,4 @@
-package info;
+package database;
 
 public class Profile{
 	private String name;
