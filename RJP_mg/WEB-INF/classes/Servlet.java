@@ -1,3 +1,5 @@
+//アカウント製作用
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,7 +17,6 @@ public class Servlet extends HttpServlet{
 	
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
-		
 		//パラメータを受け取りたい
 		
 		//文字コード
@@ -41,7 +42,6 @@ public class Servlet extends HttpServlet{
 		
 		//パラメータをJSPに転送
 		dis.forward(req,res);
-		
 	}
 	
 	public void doGet(HttpServletRequest req,HttpServletResponse res)
