@@ -13,7 +13,6 @@ public class Thrbeans{
 	//private boolean hantei=false;
 	//private ArrayList<String> error=new ArrayList<String>();
 //	private ArrayList<Resbeans> resList=new ArrayList<Resbeans>();
-	//private int favorite;  ©‚¢‚¢‚Ë‚©‚¨‹C‚É“ü‚è‚É‚³‚ê‚½”‚Ì“o˜^—pB‚Ü‚ ‚Ü‚¾‚¢‚¢‚âB
 	
 	private boolean hantei=false;
 	private ArrayList<String> error=new ArrayList<String>();
@@ -33,30 +32,39 @@ public class Thrbeans{
 	public void setT_Thread_id(int id){
 		this.t_Thread_id=id;
 	}
+	
 	public void setThreadName(String title){
 		this.threadName=title;
 	}
+	
 	public void setThreadSentence(String titlesentence){
 		this.threadSentence=titlesentence;
 	}
+	
 	public void setT_UserName(String creator){
 		this.t_UserName=creator;
 	}
+	
 	public void setResCount(int reply_nb){
 		this.resCount=reply_nb;
 	}
+	
 	public void setCreatedDate(String created_date){
 		this.createdDate=created_date;
 	}
+	
 	public void setLastUpdate(String last_update){
 		this.lastUpdate=last_update;
 	}
+	
 	public void setVisual(String visual){
 		this.visual=visual;
 	}
+	
 	public void setHantei(boolean hantei){
 		this.hantei=hantei;
 	}
+	
 	public void setError(ArrayList<String> list){
 		this.error=list;
 	}
@@ -66,30 +74,39 @@ public class Thrbeans{
 	public int getT_Thread_id(){
 		return t_Thread_id;
 	}
+	
 	public String getThreadName(){
 		return threadName;
 	}
+	
 	public String getThreadSentence(){
 		return threadSentence;
 	}
+	
 	public String getT_UserName(){
 		return t_UserName;
 	}
+	
 	public int getResCount(){
 		return resCount;
 	}
+	
 	public String getCreatedDate(){
 		return createdDate;
 	}
+	
 	public String getLastUpdate(){
 		return lastUpdate;
 	}
+	
 	public String getVisual(){
 		return visual;
 	}
+	
 	public boolean getHantei(){
 		return hantei;
 	}
+	
 	public ArrayList<String> getError(){
 		return error;
 	}
