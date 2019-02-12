@@ -1,4 +1,4 @@
-package database;
+package get;
 
 public class Profile{
 	private String name;

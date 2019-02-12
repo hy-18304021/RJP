@@ -1,4 +1,4 @@
-//TheadEResCreate‚Åg‚¤
+//TheadCreate‚Åg‚¤
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +13,7 @@ import database.QueryTest;
 import create.resthread;
 import java.util.List;
 
-public class ResThreadCreateServlet{
+public class ThreadServlet{
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
 		
