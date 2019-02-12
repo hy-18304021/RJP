@@ -1,0 +1,65 @@
+(function() {
+
+	var uid 	= "122559";
+	var objName = "_FC2RANK"+ uid;
+	var svcPath	= "https://122559.ranking.fc2.com/count?";
+	var qKeys	=	{
+						"referer"	: "&ref=",
+						"url" 		: "&page=",
+						"click"		: "&clk="
+					};
+	
+	if (! self[objName]) {
+		self[objName] = {
+			onclick: function(ev) {
+				if (! ev) ev = window.event;
+
+				var el = (ev.target || ev.srcElement);
+				var sendclicktrack = false;
+				while (el) {
+					if (el.tagName == "A") {
+						var img = new Image ();
+						img.src = svcPath + qKeys.click + this.urlEncode (el.href);
+						sendclicktrack = true;
+						break;
+					}
+					el = el.parentNode;
+				}
+
+				if (this.document_onclick) this.document_onclick (ev);
+				
+				if (sendclicktrack) this.sleep (250);
+			},
+		
+			disp_img: function() {
+				var ref = "";
+				var parent_url = "";
+				try {
+					parent_url = parent.document.URL;
+					ref = document.referrer == parent_url? parent.document.referrer : document.referrer;
+				} catch(ex) {
+				
+				}
+
+				var img = new Image();
+				img.src = svcPath
+					+ qKeys.referer + this.urlEncode (ref)
+					+ qKeys.url + this.urlEncode (location.href);
+			
+				this.sleep (250);
+			}
+		
+			, urlEncode: (self.encodeURIComponent || escape)
+			, document_onclick: document.onclick
+			, sleep: function (sleepTime) {
+				var t = (new Date ()).getTime ();
+				while ((new Date ()).getTime ()-t < sleepTime) 1;
+			}
+		}
+
+		document.onclick = function (ev) {
+			self[objName].onclick (ev);
+		}
+	}
+	self[objName].disp_img ();
+})();
