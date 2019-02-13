@@ -28,7 +28,7 @@ public class InsertTest{
 			System.out.println("接続完了");
 			
 			//SQL文を変数に格納する
-			String sql="insert into user_table(username,password) values('"+userName+"','"+passWord+"')";
+			String sql="insert into user_table(user_name,user_password) values('"+userName+"','"+passWord+"')";
 			
 			//Statementインターフェイスを実装するクラスの
 			//インスタンスを取得する
