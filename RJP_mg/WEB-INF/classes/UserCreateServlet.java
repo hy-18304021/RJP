@@ -7,7 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.io.PrintWriter;
-import get.Profile;
+import database.Profile;
 import database.InsertTest;
 import get.user;
 import java.util.List;
@@ -18,7 +18,7 @@ public class UserCreateServlet extends HttpServlet{
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
 		
-		user user=new user();
+		
 		
 		//文字コード
 		req.setCharacterEncoding("Windows-31J");
@@ -31,24 +31,31 @@ public class UserCreateServlet extends HttpServlet{
 		if(name==null||name.length()==0){
 			user.setHantei(false);
 			user.addError("名前が未記入");
-			System.out.println("名前false");
 		}
 		if(pass==null||pass.length()==0){
 			user.setHantei(false);
 			user.addError("パスワードが未記入");
-			System.out.println("パスfalse");
 		}
 		
-		if(pass==pass2||pass.length()==pass2.length()){
+		if(pass==pass2){
 			//データベースに書き込みたい
-			InsertTest.insertUser_Table(name,pass);
+			InsertTest.insertPuser_Table(name,pass);
 		
-			System.out.println("成功");
+			//データベースからリストをもらいたい
+			List<Profile> plist=getList();
+		
+			//パラメータをJSPに転送したい↓
+			req.setAttribute("magsers",plist);
+		
+			//転送先のJSPを指定
+			RequestDispatcher dis=req.getRequestDispatcher("");
+		
+			//パラメータをJSPに転送
+			dis.forward(req,res);
 		}else{
 			//アカウント登録に戻りパスワードが一致していないと返す
 			user.setHantei(false);
 			user.addError("パスワードが一致していません");
-			System.out.println("パス一致false");
 		}
 		
 		String ikisaki="/Login.html";
