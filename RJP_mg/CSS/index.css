@@ -1,4 +1,31 @@
-input{
+input.Na{
     height:50px;
     width:300px; 
+}
+
+// è„å≈íËóp
+
+element.style {
+}
+<style>Åc</style>
+#globalNav, #globalNav ul li a {
+    background: #2d2d2d;
+}
+#globalNav {
+    position: relative;
+    height: 26px;
+    border-bottom: 1px solid #999;
+    z-index: 30;
+}
+
+.ddsmoothmenu {
+    background: #FF00FF;
+    width: 100%;
+}
+
+body {
+    font: x-small sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
 }
