@@ -1,0 +1,66 @@
+element.style {
+}
+html.theme-black nav {
+    background-color: #1f1f1f;
+}
+nav {
+    position: relative;
+    min-height: 50px;
+    background: #2a3744;
+    padding-left: 76px;
+    background-color: white;
+}
+article, aside, footer, header, nav, section {
+    display: block;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+user agent stylesheet
+article, aside, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+html.theme-black, html.theme-black body {
+    color: #d9d9d9;
+    background-color: #0d0d0d;
+}
+body, html {
+    font-family: 'Noto Sans',sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    color: #34495e;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+html.theme-black, html.theme-black body {
+    color: #d9d9d9;
+    background-color: #0d0d0d;
+}
+body, html {
+    font-family: 'Noto Sans',sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    color: #34495e;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
