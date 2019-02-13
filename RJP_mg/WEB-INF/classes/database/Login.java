@@ -1,27 +1,23 @@
 package database;
 
-import database.QueryTest;
 import get.user;
 import java.util.ArrayList;
 
 public class Login{
 	
-	QueryTest oracle=new QueryTest();
-	
-	public void Login_id(user id){
-		
+	public void Login(user id){
 		
 		String user=id.idGet();
 		String pass=id.passGet();
 		
 		if(user==null||user.length()==0){
-			id.setHantei(false);
-			id.addError("usernameが入っていません。");
+			user.setHantei(false);
+			user.addError("usernameが入っていません。");
 		}else if(pass==null||pass.length()==0){
-			id.setHantei(false);
-			id.addError("passwordが入っていません。");
+			user.setHantei(false);
+			user.addError("passwordが入っていません。");
 		}else{
-			id.setHantei(true);
+			user.setHantei(true);
 		}
 	}
 	

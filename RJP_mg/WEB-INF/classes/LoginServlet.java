@@ -29,19 +29,17 @@ public class LoginServlet{
 		user.idSet(id);
 		user.passSet(pass);
 		
-		login.Login_id(user);
+		login.Login(user);
 		
 		//ログイン判定
 		if(user.getHantei()==true){
-			if(login.login(user)==true){
-				System.out.println("ログインします");
+			if(login.==true){
 				ikisaki="/index.jsp";
 				session.setAttribute("user",user);
 			}
 			else{
-				System.out.println("名前又はパスワードが違う");
-				user.addError("名前またはパスワードが間違っています。");
-				session.setAttribute("errors",user.getError());
+				userbeans.addError("名前またはパスワードが間違っています。");
+				session.setAttribute("errors",userbeans.getError());
 			}
 		}else{
 			req.setAttribute("errors",user.getError());
