@@ -4,9 +4,9 @@ Userì¬Ï‚İ‘O’ñ
 
 conn maguser/magpass
 
-drop table user_table;
-drop table thread_table;
 drop table res_table;
+drop table thread_table;
+drop table user_table;
 
 create table user_table(
 	user_name varchar2(20) PRIMARY KEY,
