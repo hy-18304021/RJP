@@ -19,14 +19,26 @@ public class ThreadServlet{
 		
  		req.setCharacterEncoding("Windows-31J");
 		
+		//スレッドのタイトルと最初のレスの作成
+		String title=req.getParameter("");
+		String res=req.getParameter("");
+		
+		if(title==null||title.length()==0){
+			user.setHantei(false);
+			user.addError("タイトルが未記入");
+			System.out.println("タイトルfalse");
+			ikisaki="";
+		}
+		if(res==null||res.length()==0){
+			user.setHantei(false);
+			user.addError("レスが未記入");
+			System.out.println("レスfalse");
+			ikisaki="";
+		}
 		
 	}
 	
 	public void doGet(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
-		
-		req.setCharacterEncoding("Windows-31J");
-		
-		
 	}
 }

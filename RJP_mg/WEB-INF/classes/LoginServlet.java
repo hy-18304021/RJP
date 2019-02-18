@@ -21,7 +21,7 @@ public class LoginServlet{
 		
 		String id=req.getParameter("name");
 		String pass=req.getParameter("pass");
-		String ikisaki="";
+		String ikisaki="/Login.html";
 		HttpSession session=req.getSession();
 		user user=new user();
 		Login login=new Login();

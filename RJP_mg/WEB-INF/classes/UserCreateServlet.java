@@ -28,15 +28,19 @@ public class UserCreateServlet extends HttpServlet{
 		String pass = req.getParameter("pass");
 		String pass2 = req.getParameter("kacupass");
 		
+		String ikisaki="";
+		
 		if(name==null||name.length()==0){
 			user.setHantei(false);
 			user.addError("名前が未記入");
 			System.out.println("名前false");
+			ikisaki="/Newaccount.html";
 		}
 		if(pass==null||pass.length()==0){
 			user.setHantei(false);
 			user.addError("パスワードが未記入");
 			System.out.println("パスfalse");
+			ikisaki="/Newaccount.html";
 		}
 		
 		if(pass==pass2||pass.length()==pass2.length()){
@@ -44,14 +48,14 @@ public class UserCreateServlet extends HttpServlet{
 			InsertTest.insertUser_Table(name,pass);
 		
 			System.out.println("成功");
+			ikisaki="/Login.html";
 		}else{
 			//アカウント登録に戻りパスワードが一致していないと返す
 			user.setHantei(false);
 			user.addError("パスワードが一致していません");
 			System.out.println("パス一致false");
+			ikisaki="/Newaccount.html";
 		}
-		
-		String ikisaki="/Login.html";
 		
 		RequestDispatcher dispatcher=req.getRequestDispatcher(ikisaki);
 		dispatcher.forward(req,res);
