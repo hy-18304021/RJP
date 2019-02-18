@@ -19,7 +19,7 @@ create table thread_table(
 	thread_name varchar2(80) NOT NULL UNIQUE,
 	thread_create_time date DEFAULT SYSDATE UNIQUE,
 	thread_update_time date DEFAULT SYSDATE UNIQUE,
-	user_name varchar2(20) REFERENCES user_table(user_name),
+	user_name varchar2(20) REFERENCES user_table(user_name)
 );
 
 create table res_table(
