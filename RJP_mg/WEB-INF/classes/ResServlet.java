@@ -18,14 +18,33 @@ public class ResServlet{
 		
  		req.setCharacterEncoding("Windows-31J");
 		
+		List<Res> plist=getList();
+		
+		//レスの作成
+		String res=req.getParameter("");
+		String name=plist;
+		
+		if(res==null||res.length()==0){
+			user.setHantei(false);
+			user.addError("レスが未記入");
+			System.out.println("レスfalse");
+			ikisaki="";
+		}
+		InsertTest.insertRes(res);
+		
+		System.out.println("成功");
 		
 	}
 	
 	public void doGet(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
-		
-		req.setCharacterEncoding("Windows-31J");
-		
-		
 	}
+	
+	public List<Res> getList(){
+		
+		List<Res> plist=QueryTest.getQueryList();
+		
+		return plist;
+	}
+}
 }

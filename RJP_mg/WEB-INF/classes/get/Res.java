@@ -2,45 +2,62 @@
 package get;
 import java.util.Date;
 public class Res{
-	private int r_Thread_id;
+	private int res_number;
 	private int res_id;
-	private String r_UserName;
-	private String res;
+	private String thread_name="";
+	private String res_con="";
 	//date‚ÍString‚É‚·‚é
 	//private Date ResTime;
-	private String resTime=null;
+	private String res_cont_time=null;
+	private String user_name="";
 	
-	public void setR_UserName(String username){
-		this.r_UserName=username;
-	}
-	public void setRes(String coment){
-		this.res=coment;
-	}
-	public void setResTime(String comenttime){
-		this.resTime=comenttime;
-	}
-	public void setRes_id(int comentnumber){
-		this.res_id=comentnumber;
+	public void res_numberSet(int number){
+		res_number=number;
 	}
 	
-	public void setR_Thread_id(int thread_id){
-		this.r_Thread_id=thread_id;
+	public int res_numberGet(){
+		return res_number;
 	}
 	
-	public String getR_UserName(){
-		return this.r_UserName;
-	}
-	public String getRes(){
-		return this.res;
-	}
-	public String getResTime(){
-		return this.resTime;
-	}
-	public int getRes_id(){
-		return this.res_id;
+	public void res_idSet(int id){
+		res_di=id;
 	}
 	
-	public int getR_Thread_id(){
-		return this.r_Thread_id;
+	public int res_idGet(){
+		return res_id;
 	}
+	
+	public void thread_nameSet(int name){
+		thread_name=name;
+	}
+	
+	public int thread_nameGet(){
+		return thread_name;
+	}
+		
+	public void res_conSet(int con){
+		res_con=con;
+	}
+	
+	public int res_conGet(){
+		return res_con;
+	}
+	
+	
+	public void res_cont_timeSet(int time){
+		res_cont_time=time;
+	}
+	
+	public int res_cont_timeGet(){
+		return res_cont_time;
+	}
+		
+	public void user_nameSet(int name){
+		user_name=name;
+	}
+	
+	public int user_nameGet(){
+		return user_name;
+	}
+	
 }

@@ -10,62 +10,99 @@ import get.Profile;
 import get.user;
 
 public class QueryTest{
-	private static Connection conn=null;
-	private PreparedStatement st = null;
-	private ResultSet rs=null;
 	
-	user user=new user();
-	
-	public static void getConnection(){
+	public static List<Thread> getThreadList(String name){
 		try{
-			System.out.println("jdbcドライバの設置");
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			
-			conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","info","pro");
-			conn.setAutoCommit(false);
+
+			//Oracleに接続する
+			Connection cn=
+				DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","tuser","pass");
 			System.out.println("接続完了");
-			//rs.close();
-		}
-		catch(Exception e){
-			System.out.println("getConnectionの例外です。");
+			
+			//select文
+			String sql="select user_name from user_table where user_name=name";
+
+			//Statementインターフェイスを実装するクラスをインスタンス化する
+			Statement st=cn.createStatement();
+
+			//select文を実行し
+			//ResultSetインターフェイスを実装したクラスの
+			//インスタンスが返る
+			ResultSet rs=st.executeQuery(sql);
+			
+			String user = rs.getString(1);
+			
+			//Oracleから切断する
+			cn.close();
+
+			System.out.println("切断完了");
+		}catch(ClassNotFoundException e){
+			e.printStackTrace();
+			System.out.println("クラスがないみたい。");
+		}catch(SQLException e){
+			e.printStackTrace();
+			System.out.println("SQL関連の例外みたい。");
+		}catch(Exception e){
 			e.printStackTrace();
 		}
-		
+		return user;
 		
 	}
 	
-	//Loginファイルでloginメソッドを使うときに使われる。
-	public boolean userSelect(user id){
-		System.out.println("userSelectメソッド開始");
-		boolean hasClient=false;
-		getConnection();
+	public static List<Res> getResList(){
 		
+		List<Res> resList = new ArrayList<Profile>();
+	
+	
 		try{
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+
+			//Oracleに接続する
+			Connection cn=
+				DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","tuser","pass");
+			System.out.println("接続完了");
 			
-			String sql="select * from user_table where user_name = ? and user_password = ?";
-		
-			st=conn.prepareStatement(sql);
-			
-			System.out.println("userSelectのstはうまくいったp127");
-			st.setString(1,user.idGet());
-			st.setString(2,user.passGet());
-			System.out.println("userSelectのsetStringがうまくいった。p130");
-			rs=st.executeQuery();
-			System.out.println("userSelectのrsがうまくいったp132");
-			
-			
-			//レコードが選択されていない可能性がある。
-			if(rs.next()){
-				hasClient = true;
+			//select文
+			String sql="select res_con from res_table";
+
+			//Statementインターフェイスを実装するクラスをインスタンス化する
+			Statement st=cn.createStatement();
+
+			//select文を実行し
+			//ResultSetインターフェイスを実装したクラスの
+			//インスタンスが返る
+			ResultSet rs=st.executeQuery(sql);
+
+			//カーソルを一行だけスクロールし、データをフェッチする
+			while(rs.next()){
+				Profile prof = new Profile();
+				
+				String name = rs.getString(1);	//1列目のデータを取得
+				prof.setName(name);
+				
+				resList.add(prof);
+				
+				//System.out.println("username"+"\t"+"password"); //確認表示
+				//System.out.println(name+"\t"+pass);				//確認その２
 			}
-			st.close();
-		}catch(SQLException e){
-			System.out.println("userSelectの例外です。");
-			e.printStackTrace();
+
 			
-		
+			//Oracleから切断する
+			cn.close();
+
+			System.out.println("切断完了");
+		}catch(ClassNotFoundException e){
+			e.printStackTrace();
+			System.out.println("クラスがないみたい。");
+		}catch(SQLException e){
+			e.printStackTrace();
+			System.out.println("SQL関連の例外みたい。");
+		}catch(Exception e){
+			e.printStackTrace();
 		}
-		System.out.println("userSelectメソッド終了");
-		return hasClient;
+		return resList;
 		
 	}
+	
+}
