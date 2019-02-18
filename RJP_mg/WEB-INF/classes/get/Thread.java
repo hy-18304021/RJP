@@ -3,106 +3,60 @@ package get;
 import java.util.Date;
 import java.util.ArrayList;
 public class Thread{
-	private int thread_id;
-	private boolean hantei=false;
-	private ArrayList<String> error=new ArrayList<String>();
-	
-	private int t_Thread_id;
-	private String threadName="";
-	private String threadSentence="";
-	private int resCount;
+	private int thread_number;
+	private int res_id;
+	private String thread_name="";
 	//date‚Ístring‚Å‚Æ‚é‚±‚Æ‚É‚·‚éB
 	//private Date CreatedDate=null;
 	//private Date LastUpdate=null;
-	private String createdDate=null;
-	private String lastUpdate=null;
-	private String t_UserName="";
-	private String visual="";
+	private String thread_create_time=null;
+	private String thread_update_time=null;
+	private String user_name="";
 	
-	public void setT_Thread_id(int id){
-		this.t_Thread_id=id;
+	public void thread_numberSet(int id){
+		thread_number=id;
 	}
 	
-	public void setThreadName(String title){
-		this.threadName=title;
+	public void res_idSet(int res){
+		res_id=res;
 	}
 	
-	public void setThreadSentence(String titlesentence){
-		this.threadSentence=titlesentence;
+	public void thread_nameSet(String title){
+		thread_name=title;
 	}
 	
-	public void setT_UserName(String creator){
-		this.t_UserName=creator;
+	public void thread_create_timeSet(String time){
+		thread_create_time=time;
 	}
 	
-	public void setResCount(int reply_nb){
-		this.resCount=reply_nb;
+	public voidthread_update_timeSet(String time){
+		thread_update_time=time;
+	}
+	public void user_nameSet(String name){
+		user_name=name;
 	}
 	
-	public void setCreatedDate(String created_date){
-		this.createdDate=created_date;
+	public int thread_numberGet(){
+		return thread_number;
 	}
 	
-	public void setLastUpdate(String last_update){
-		this.lastUpdate=last_update;
+	public int res_idGet(){
+		return res_id;
 	}
 	
-	public void setVisual(String visual){
-		this.visual=visual;
+	public String thread_nameGet(){
+		return thread_name;
 	}
 	
-	public void setHantei(boolean hantei){
-		this.hantei=hantei;
+	public String thread_create_timeGet(){
+		return thread_create_time;
 	}
 	
-	public void setError(ArrayList<String> list){
-		this.error=list;
+	public String thread_update_timeGet(){
+		return thread_update_time;
 	}
-	
-	
-	
-	public int getT_Thread_id(){
-		return t_Thread_id;
-	}
-	
-	public String getThreadName(){
-		return threadName;
-	}
-	
-	public String getThreadSentence(){
-		return threadSentence;
-	}
-	
-	public String getT_UserName(){
-		return t_UserName;
-	}
-	
-	public int getResCount(){
-		return resCount;
-	}
-	
-	public String getCreatedDate(){
-		return createdDate;
-	}
-	
-	public String getLastUpdate(){
-		return lastUpdate;
-	}
-	
-	public String getVisual(){
-		return visual;
-	}
-	
-	public boolean getHantei(){
-		return hantei;
-	}
-	
-	public ArrayList<String> getError(){
-		return error;
-	}
-	
-	public void addError(String message){
-		error.add(message);
+	public Stringuser_nameGet(){
+		return user_name;
 	}
 	
 }
