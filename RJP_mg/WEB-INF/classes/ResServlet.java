@@ -30,6 +30,7 @@ public class ResServlet{
 			System.out.println("ƒŒƒXfalse");
 			ikisaki="";
 		}
+		
 		InsertTest.insertRes(res);
 		
 		System.out.println("¬Œ÷");

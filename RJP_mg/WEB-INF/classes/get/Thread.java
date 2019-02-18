@@ -29,7 +29,7 @@ public class Thread{
 		thread_create_time=time;
 	}
 	
-	public voidthread_update_timeSet(String time){
+	public void thread_update_timeSet(String time){
 		thread_update_time=time;
 	}
 	public void user_nameSet(String name){
@@ -55,7 +55,7 @@ public class Thread{
 	public String thread_update_timeGet(){
 		return thread_update_time;
 	}
-	public Stringuser_nameGet(){
+	public String user_nameGet(){
 		return user_name;
 	}
 	

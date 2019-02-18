@@ -7,10 +7,10 @@ import javax.servlet.ServletException;
 import javax.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.io.PrintWriter;
-import get.Profile;
+import get.Thread;
+import get.Res;
 import database.InsertTest;
 import database.QueryTest;
-import create.resthread;
 import java.util.List;
 
 public class ThreadServlet{

@@ -20,43 +20,43 @@ public class Res{
 	}
 	
 	public void res_idSet(int id){
-		res_di=id;
+		res_id=id;
 	}
 	
 	public int res_idGet(){
 		return res_id;
 	}
 	
-	public void thread_nameSet(int name){
+	public void thread_nameSet(String name){
 		thread_name=name;
 	}
 	
-	public int thread_nameGet(){
+	public String thread_nameGet(){
 		return thread_name;
 	}
 		
-	public void res_conSet(int con){
+	public void res_conSet(String con){
 		res_con=con;
 	}
 	
-	public int res_conGet(){
+	public String res_conGet(){
 		return res_con;
 	}
 	
 	
-	public void res_cont_timeSet(int time){
+	public void res_cont_timeSet(String time){
 		res_cont_time=time;
 	}
 	
-	public int res_cont_timeGet(){
+	public String res_cont_timeGet(){
 		return res_cont_time;
 	}
 		
-	public void user_nameSet(int name){
+	public void user_nameSet(String name){
 		user_name=name;
 	}
 	
-	public int user_nameGet(){
+	public String user_nameGet(){
 		return user_name;
 	}
 	
