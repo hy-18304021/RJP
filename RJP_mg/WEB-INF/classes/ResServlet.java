@@ -7,10 +7,10 @@ import javax.servlet.ServletException;
 import javax.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.io.PrintWriter;
-import database.Profile;
-import database.InsertTest;
 import database.QueryTest;
 import java.util.List;
+import database.InsertTest;
+import get.ResClreate;
 
 public class ResServlet{
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
@@ -18,34 +18,50 @@ public class ResServlet{
 		
  		req.setCharacterEncoding("Windows-31J");
 		
-		List<Res> plist=getList();
+		//スレッドの名前を受け取る
+		String title=req.getParameter("");
+		
 		
 		//レスの作成
-		String res=req.getParameter("");
-		String name=plist;
+		String new_res=req.getParameter("");
 		
-		if(res==null||res.length()==0){
-			user.setHantei(false);
-			user.addError("レスが未記入");
+		if(new_res==null||new_res.length()==0){
 			System.out.println("レスfalse");
-			ikisaki="";
 		}
 		
-		InsertTest.insertRes(res);
+		InsertTest.insertRes(title,new_res);
+		//転送先のJSPを指定
+		RequestDispatcher dis=req.getRequestDispatcher("");
 		
 		System.out.println("成功");
-		
+		//パラメータをJSPに転送
+		dis.forward(req,res);
 	}
 	
+	//レスページにレスを送りたい
 	public void doGet(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
-	}
-	
-	public List<Res> getList(){
 		
-		List<Res> plist=QueryTest.getQueryList();
+		//データベースからリストをもらいたい
+		List<ResClreate> plist=getList();
+		
+		
+		//パラメータをJSPに転送したい↓
+		
+		req.setAttribute("",plist);
+		
+		//転送先のJSPを指定
+		RequestDispatcher dis=req.getRequestDispatcher("");
+		
+		//パラメータをJSPに転送
+		dis.forward(req,res);
+		
+		
+	}
+	public List<ResClreate> getList(){
+		List<ResClreate> plist=QueryTest.getResList();
 		
 		return plist;
 	}
-}
+	
 }

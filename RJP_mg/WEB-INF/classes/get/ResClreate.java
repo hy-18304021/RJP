@@ -1,7 +1,7 @@
 //ƒŒƒX‚ğ“Še‚·‚é‚Æ‚«‚É•K—v‚Èî•ñ‚ğŠi”[‚·‚é“ü‚ê•¨“I‚È–ğŠ„
 package get;
 import java.util.Date;
-public class Res{
+public class ResClreate{
 	private int res_number;
 	private int res_id;
 	private String thread_name="";

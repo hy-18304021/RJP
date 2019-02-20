@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 public class InsertTest{
 	
-	public int insertThread(String title,String res,String name){
+	public static int insertThread(String title,String res){
 		int count = 0; //処理した行数を入れるための変数
 		try{
 			//Driverインターフェイスを実装するクラスをロードする
@@ -25,8 +25,8 @@ public class InsertTest{
 			System.out.println("接続完了");
 			
 			//SQL文を変数に格納する
-			String sql="insert into user_table(res_id,thread_name,thread_create_time,thread_update_time,user_name) values('+1+','"+title+"','"+name+"')";
-			String sql2="insert into res_table(res_id,thread_name,res_con,res_cont_time,user_name) values('1','"+title+"','"+res+"','"+name+"')";
+			String sql="insert into user_table(res_id,thread_name,thread_create_time,thread_update_time) values('+1+','"+title+"')";
+			String sql2="insert into res_table(res_id,thread_name,res_con,res_cont_time) values('1','"+title+"','"+res+"')";
 			
 			//Statementインターフェイスを実装するクラスの
 			//インスタンスを取得する
@@ -57,7 +57,7 @@ public class InsertTest{
 		return count;
 	}
 	
-	public int insertRes(String title,String res,String name){
+	public static int insertRes(String title,String res){
 		int count = 0; //処理した行数を入れるための変数
 		try{
 			//Driverインターフェイスを実装するクラスをロードする
@@ -75,7 +75,7 @@ public class InsertTest{
 			System.out.println("接続完了");
 			
 			//SQL文を変数に格納する
-			String sql="insert into res_table(res_id,thread_name,res_con,res_cont_time,user_name) values('1','"+title+"','"+res+"','"+name+"')";
+			String sql="insert into res_table(res_id,thread_name,res_con,res_cont_time) values('1','"+title+"','"+res+"',)";
 			
 			//Statementインターフェイスを実装するクラスの
 			//インスタンスを取得する
