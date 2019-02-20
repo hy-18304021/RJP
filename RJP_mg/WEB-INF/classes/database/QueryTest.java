@@ -27,7 +27,7 @@ public class QueryTest{
 			System.out.println("接続完了");
 			
 			//select文
-			String sql="select thread from thread_table";
+			String sql="select thread_name,count(res_id),thread_create_time,thread_update_time from thread_table GROUP BY thread_name,thread_create_time,thread_update_time";
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();
@@ -42,7 +42,13 @@ public class QueryTest{
 				Thread thread = new Thread();
 				
 				String name = rs.getString(1);	//1列目のデータを取得
+				int res_count = rs.getInt(2);	//2列目のデータを取得
+				String create_time = rs.getString(3);	//3列目のデータを取得
+				String update_time = rs.getString(4);	//4列目のデータを取得
 				thread.thread_nameSet(name);
+				thread.res_idSet(res_count);
+				thread.thread_create_timeSet(create_time);
+				thread.thread_update_timeSet(update_time);
 				
 				threadList.add(thread);
 				
