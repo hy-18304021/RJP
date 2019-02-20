@@ -30,7 +30,7 @@ public class TopServlet{
 		
 		req.setAttribute("",list);
 		
-		RequestDispatcher dis=req.getRequestDispatcher("");
+		RequestDispatcher dis=req.getRequestDispatcher("/Surenokakunin");
 		dis.forward(req,res);
 		
 	}
@@ -48,7 +48,7 @@ public class TopServlet{
 		req.setAttribute("threadindex",plist);
 		
 		//転送先のJSPを指定
-		RequestDispatcher dis=req.getRequestDispatcher("");
+		RequestDispatcher dis=req.getRequestDispatcher("/index");
 		
 		//パラメータをJSPに転送
 		dis.forward(req,res);
