@@ -1,4 +1,35 @@
 <web-app>
+	
+	<servlet>
+		<servlet-name>index</servlet-name>
+		<servlet-class>TopServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>index</servlet-name>
+		<url-pattern>/topp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>res</servlet-name>
+		<servlet-class>ResServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>res</servlet-name>
+		<url-pattern>/reskaku</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>thread</servlet-name>
+		<servlet-class>ThreadServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>thread</servlet-name>
+		<url-pattern>/kakuthread</url-pattern>
+	</servlet-mapping>
+	
     <servlet>
         <servlet-name>Kakuni</servlet-name>
         <jsp-file>SureKaku.jsp</jsp-file>

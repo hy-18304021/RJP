@@ -96,7 +96,7 @@
    <input type="text" name="dummytext" value="" style="display:none">
    <input type="hidden" name="act" value="post">
    <div id="bbsform2">
-    <table border="0" method = 'Post' action ='Kakunin'>
+    <table border="0" method = 'Post' action ='topp'>
      <tbody>
      <tr>
       <td nowrap="">åèñº</td>

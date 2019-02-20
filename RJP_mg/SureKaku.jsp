@@ -59,7 +59,7 @@
         ${Kakunin.res_con}<br>
     </form>
 
-    <input class="button" type="submit" name="" value="“Še‚·‚é"@method="Post" >
+    <input class="button" type="submit" name="" value="“Še‚·‚é"@method="Post" action ='kakuthread'>
 
 </body>
 </html>
