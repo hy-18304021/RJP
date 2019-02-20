@@ -96,7 +96,7 @@
    <input type="text" name="dummytext" value="" style="display:none">
    <input type="hidden" name="act" value="post">
    <div id="bbsform2">
-    <table border="0">
+    <table border="0" method = 'Post' action ='Kakunin'>
      <tbody>
      <tr>
       <td nowrap="">件名</td>
@@ -121,7 +121,7 @@
      <tr>
       <td colspan="2" align="center">
        <input class="button" type="submit" value="投稿">
-<input class="button" type="reset" value="リセット">      </td>
+　　　　<input class="button" type="reset" value="リセット"></td>
      </tr>
     </tbody></table>
    </div>

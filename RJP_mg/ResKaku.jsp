@@ -41,7 +41,7 @@
 
 </head>
 <body>
-<center><table width="800px" bgcolor="#000000" cellspacing="1" cellpadding="5"><tbody><tr><td bgcolor="#aaaaaa" align="center">ここは進級のための掲示板です。<br>
+    <td bgcolor="#aaaaaa" align="center">ここは進級のための掲示板です。<br>
 <br>
 <b>【掲示板利用規約】</b>
 
@@ -51,8 +51,6 @@
 <font color="#FF0000"><br>
 
 <script type="text/javascript" src="./掲示板名_files/analyze.js.ダウンロード" charset="utf-8"></script>
-</font></td></tr></tbody></table><br></center>
- <div id="body" align="center">
-  </div>
-  </body>
-  </html>
+</font></td>
+
+</body>

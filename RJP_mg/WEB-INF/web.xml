@@ -1,3 +1,23 @@
 <web-app>
+    <servlet>
+        <servlet-name>Kakuni</servlet-name>
+        <jsp-file>SureKaku.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Kakuni</servlet-name>
+        <url-pattern>/Surenokakunin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Top</servlet-name>
+        <jsp-file>index.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Top</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>
