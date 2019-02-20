@@ -40,7 +40,7 @@
  </style>
 
 </head>
-
+<body>
 <center><table width="800px" bgcolor="#000000" cellspacing="1" cellpadding="5"><tbody><tr><td bgcolor="#aaaaaa" align="center">‚±‚±‚Íi‹‰‚Ì‚½‚ß‚ÌŒfŽ¦”Â‚Å‚·B<br>
 <br>
 <b>yŒfŽ¦”Â—˜—p‹K–ñz</b>
@@ -128,3 +128,5 @@
   </form>
 
  </div><!---->
+</body>
+</html>
