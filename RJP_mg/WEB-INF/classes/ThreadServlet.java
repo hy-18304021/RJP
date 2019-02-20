@@ -27,10 +27,12 @@ public class ThreadServlet{
 			System.out.println("レスfalse");
 		}
 		InsertTest.insertThread(title,new_res);
+		
+		System.out.println("成功");
 		//転送先のJSPを指定
 		RequestDispatcher dis=req.getRequestDispatcher("");
 		
-		System.out.println("成功");
+		System.out.println("JSP成功");
 		//パラメータをJSPに転送
 		dis.forward(req,res);
 	}

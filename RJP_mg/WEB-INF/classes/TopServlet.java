@@ -7,10 +7,11 @@ import javax.servlet.ServletException;
 import javax.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.io.PrintWriter;
-import database.Profile;
 import database.InsertTest;
 import database.QueryTest;
 import java.util.List;
+import java.util.ArrayList;
+import get.Thread;
 
 public class TopServlet{
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
@@ -18,14 +19,46 @@ public class TopServlet{
 		
  		req.setCharacterEncoding("Windows-31J");
 		
+		//スレッド名とレスの受け取り
+		String thread=req.getParameter("");
+		String res_con=req.getParameter("");
+		
+		List<String> list=new ArrayList<>();
+		
+		list.add(thread);
+		list.add(res_con);
+		
+		req.setAttribute("",list);
+		
+		RequestDispatcher dis=req.getRequestDispatcher("");
+		dis.forward(req,res);
 		
 	}
 	
 	public void doGet(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
 		
-		req.setCharacterEncoding("Windows-31J");
+		 req.setCharacterEncoding("Windows-31J");
 		
+		//データベースからリストをもらいたい
+		List<Thread> plist=getList();
+		
+		
+		//パラメータをJSPに転送したい↓
+		req.setAttribute("threadindex",plist);
+		
+		//転送先のJSPを指定
+		RequestDispatcher dis=req.getRequestDispatcher("");
+		
+		//パラメータをJSPに転送
+		dis.forward(req,res);
 		
 	}
+	
+	public List<Thread> getList(){
+		List<Thread> plist=QueryTest.getThreadList();
+		
+		return plist;
+	}
+	
 }
