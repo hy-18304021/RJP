@@ -92,23 +92,23 @@
 <br>
 <br>
 
-  <form id="bbsform"  action="Surenokakunin" method="POST" enctype="multipart/form-data">
+  <form id="bbsform"  action="Threadkakunin" method="POST" enctype="multipart/form-data">
    <div id="bbsform2">
-    <table border="0" method = 'Post' action ='topp'>
+    <table border="0" method = 'Post' action ='Tops'>
      <tbody>
      <tr>
       <td nowrap>件名</td>
-      <td><input type="text" name="dai" size="30"></td>
+      <td><input type="text" name="Thread" size="30"></td>
      </tr>
      <tr>
       <td colspan="2">
-       <textarea name="msg" rows="7" cols="48"></textarea>
+       <textarea name="Res" rows="7" cols="48"></textarea>
       </td>
      </tr>
      <tr>
       <td colspan="2">
        <input class="button" type="submit" value="投稿">
-　　　　<input class="button" type="reset" value="リセット"></td>
+       <input class="button" type="reset" value="リセット"></td>
      </tr>
     </tbody></table>
    </div>

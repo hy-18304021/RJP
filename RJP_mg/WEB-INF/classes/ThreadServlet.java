@@ -10,11 +10,13 @@ import java.io.PrintWriter;
 import database.InsertTest;
 import database.QueryTest;
 
-public class ThreadServlet{
+public class ThreadServlet extends HttpServlet{
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
 		
  		req.setCharacterEncoding("Windows-31J");
+		
+		RequestDispatcher dis=req.getRequestDispatcher("");
 		
 		//スレッドのタイトルと最初のレスの作成
 		String title=req.getParameter("thread");
@@ -22,15 +24,19 @@ public class ThreadServlet{
 		
 		if(title==null||title.length()==0){
 			System.out.println("タイトルfalse");
+			dis=req.getRequestDispatcher("/Threadkakunin");
+			dis.forward(req,res);
 		}
 		if(new_res==null||new_res.length()==0){
 			System.out.println("レスfalse");
+			dis=req.getRequestDispatcher("/Threadkakunin");
+			dis.forward(req,res);
 		}
 		InsertTest.insertThread(title,new_res);
 		
 		System.out.println("成功");
 		//転送先のJSPを指定
-		RequestDispatcher dis=req.getRequestDispatcher("/tops");
+		dis=req.getRequestDispatcher("/Topp");
 		
 		System.out.println("JSP成功");
 		//パラメータをJSPに転送

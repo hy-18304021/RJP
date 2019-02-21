@@ -13,25 +13,25 @@ import java.util.List;
 import java.util.ArrayList;
 import get.Thread;
 
-public class TopServlet{
+public class TopServlet extends HttpServlet{
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
 		
  		req.setCharacterEncoding("Windows-31J");
 		
 		//スレッド名とレスの受け取り
-		String thread=req.getParameter("dai");
-		String res_con=req.getParameter("msg");
+		String thread=req.getParameter("Thread");
+		String res_con=req.getParameter("Res");
 		
 		List<String> list=new ArrayList<>();
 		
 		list.add(thread);
 		list.add(res_con);
 		
-		System.out.println("listには入った");
+		System.out.println("listに入っている");
 		req.setAttribute("threadKakunin",list);
 		
-		RequestDispatcher dis=req.getRequestDispatcher("/Surenokakunin");
+		RequestDispatcher dis=req.getRequestDispatcher("/Threadkakunin");
 		dis.forward(req,res);
 		
 	}
@@ -49,7 +49,7 @@ public class TopServlet{
 		req.setAttribute("threadindex",plist);
 		
 		//転送先のJSPを指定
-		RequestDispatcher dis=req.getRequestDispatcher("/tops");
+		RequestDispatcher dis=req.getRequestDispatcher("/Topp");
 		
 		//パラメータをJSPに転送
 		dis.forward(req,res);

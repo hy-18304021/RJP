@@ -12,6 +12,7 @@
  <title>掲示板名</title>
  <link rel="stylesheet" href="./掲示板名_files/jlisting.css" type="text/css">
  <link rel="stylesheet" href="./掲示板名_files/745617.css" type="text/css">
+ <link rel="alternate" type="application/rss+xml" title="rss" href="http://musouon.bbs.fc2.com/rss/">
  
  <style type="text/css">
  <!--
@@ -50,16 +51,39 @@
 <font color="#FF0000"><br>
 
 <script type="text/javascript" src="./掲示板名_files/analyze.js.ダウンロード" charset="utf-8"></script>
-</font></td></tr></tbody></table><br></center>
- <div id="body" align="center">
 
-    <form var="Kakunin" items="${threadKakunin}" method="Post" action ='kakuthread'> 
-        <a type='text' name='thread'>${Kakunin.thread}</a><br>
-        <a type='text' name='res'>${Kakunin.res_con}</a><br>
-        <input class="button" type="submit" value="投稿する">
+<form var="Title" items="${title}" method="Post" action ='titlehyoji'> 
+        ${Title.threadName}<br>
     </form>
 
+<c:forEach var="res" items="${resindx}"> 
+    <table>
+      <tr class="td">
+       <td>${res.number}</td><td>${res.time}</td>
+       <td>${res.naiyou}</td>
+      </tr>
+      </c:forEach>
+    </table>
 
-
-</body>
-</html>
+    <table border="0" method = 'Post' action ='topp'>
+     <tbody>
+     <tr>
+      <td>
+       <noscript>JavaScriptを有効にすると、絵文字簡単ウィンドウが使えます</noscript>
+       </small>
+      </td>
+     </tr>
+     <tr>
+      <td colspan="2">
+       <textarea name="msg" rows="7" cols="48"></textarea>
+      </td>
+     </tr>
+     <tr>
+      <td colspan="2" align="center">
+       <input class="button" type="submit" value="投稿">
+		<input class="button" type="reset" value="リセット"></td>
+     </tr>
+    </tbody>
+    </table>
+    </body>
+    </html>

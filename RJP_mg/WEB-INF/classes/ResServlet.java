@@ -12,7 +12,7 @@ import java.util.List;
 import database.InsertTest;
 import get.ResClreate;
 
-public class ResServlet{
+public class ResServlet extends HttpServlet{
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
 		
@@ -23,7 +23,7 @@ public class ResServlet{
 		
 		
 		//レスの作成
-		String new_res=req.getParameter("");
+		String new_res=req.getParameter("res");
 		
 		if(new_res==null||new_res.length()==0){
 			System.out.println("レスfalse");
@@ -31,7 +31,7 @@ public class ResServlet{
 		
 		InsertTest.insertRes(title,new_res);
 		//転送先のJSPを指定
-		RequestDispatcher dis=req.getRequestDispatcher("/sure");
+		RequestDispatcher dis=req.getRequestDispatcher("/Thread");
 		
 		System.out.println("成功");
 		//パラメータをJSPに転送
@@ -51,7 +51,7 @@ public class ResServlet{
 		req.setAttribute("resindx",plist);
 		
 		//転送先のJSPを指定
-		RequestDispatcher dis=req.getRequestDispatcher("/sure");
+		RequestDispatcher dis=req.getRequestDispatcher("/Thread");
 		
 		//パラメータをJSPに転送
 		dis.forward(req,res);
