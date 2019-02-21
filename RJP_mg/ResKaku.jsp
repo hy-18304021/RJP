@@ -54,9 +54,6 @@
 </font></td></tr></tbody></table><br></center>
  <div id="body" align="center">
 
-    <form var="" items="${threadindx}"> 
-
-    </form>
 
 </body>
 </html>

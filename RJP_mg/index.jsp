@@ -11,7 +11,7 @@
  <meta http-equiv="content-style-type" content="text/css">
  <title>ŒfŽ¦”Â–¼</title>
  <link rel="stylesheet" href="./ŒfŽ¦”Â–¼_files/jlisting.css" type="text/css">
- <link rel="stylesheet" href="./ŒfŽ¦”Â–¼_files/745617.css" type="text/css">
+ <link rel="stylesheet" href="CSS/index.css" type="text/css">
  <link rel="alternate" type="application/rss+xml" title="rss" href="http://musouon.bbs.fc2.com/rss/">
  
  <style type="text/css">
