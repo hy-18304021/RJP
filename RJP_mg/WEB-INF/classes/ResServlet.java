@@ -31,7 +31,7 @@ public class ResServlet{
 		
 		InsertTest.insertRes(title,new_res);
 		//転送先のJSPを指定
-		RequestDispatcher dis=req.getRequestDispatcher("");
+		RequestDispatcher dis=req.getRequestDispatcher("/sure");
 		
 		System.out.println("成功");
 		//パラメータをJSPに転送
@@ -51,7 +51,7 @@ public class ResServlet{
 		req.setAttribute("",plist);
 		
 		//転送先のJSPを指定
-		RequestDispatcher dis=req.getRequestDispatcher("");
+		RequestDispatcher dis=req.getRequestDispatcher("/sure");
 		
 		//パラメータをJSPに転送
 		dis.forward(req,res);

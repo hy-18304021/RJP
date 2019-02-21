@@ -48,7 +48,7 @@ public class TopServlet{
 		req.setAttribute("threadindex",plist);
 		
 		//転送先のJSPを指定
-		RequestDispatcher dis=req.getRequestDispatcher("/index");
+		RequestDispatcher dis=req.getRequestDispatcher("/tops");
 		
 		//パラメータをJSPに転送
 		dis.forward(req,res);

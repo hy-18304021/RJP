@@ -30,7 +30,7 @@ public class ThreadServlet{
 		
 		System.out.println("成功");
 		//転送先のJSPを指定
-		RequestDispatcher dis=req.getRequestDispatcher("/index");
+		RequestDispatcher dis=req.getRequestDispatcher("/tops");
 		
 		System.out.println("JSP成功");
 		//パラメータをJSPに転送

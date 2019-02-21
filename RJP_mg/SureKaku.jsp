@@ -54,12 +54,13 @@
 </font></td></tr></tbody></table><br></center>
  <div id="body" align="center">
 
-    <form var="Kakunin" items="${threadKakunin}"> 
+    <form var="Kakunin" items="${threadKakunin}" method="Post" action ='kakuthread'> 
         ${Kakunin.thread}<br>
         ${Kakunin.res_con}<br>
+        <input class="button" type="submit" name="" value="“Še‚·‚é">
     </form>
 
-    <input class="button" type="submit" name="" value="“Še‚·‚é"@method="Post" action ='kakuthread'>
+
 
 </body>
 </html>
