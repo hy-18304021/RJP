@@ -92,26 +92,13 @@
 <br>
 <br>
 
-  <form id="bbsform" name="fc2BBSform" action="http://musouon.bbs.fc2.com/" method="POST" enctype="multipart/form-data">
-   <input type="text" name="dummytext" value="" style="display:none">
-   <input type="hidden" name="act" value="post">
+  <form id="bbsform"  action="Surenokakunin" method="POST" enctype="multipart/form-data">
    <div id="bbsform2">
     <table border="0" method = 'Post' action ='topp'>
      <tbody>
      <tr>
-      <td nowrap="">件名</td>
-      <td><input type="text" name="dai" value="" size="30"></td>
-     </tr>
-     <tr>
-      <td colspan="2">メッセージ
-       <small>
-       <script language="JavaScript">
-       <!--
-       //-->
-       </script>
-       <noscript>JavaScriptを有効にすると、絵文字簡単ウィンドウが使えます</noscript>
-       </small>
-      </td>
+      <td nowrap>件名</td>
+      <td><input type="text" name="dai" size="30"></td>
      </tr>
      <tr>
       <td colspan="2">
@@ -119,7 +106,7 @@
       </td>
      </tr>
      <tr>
-      <td colspan="2" align="center">
+      <td colspan="2">
        <input class="button" type="submit" value="投稿">
 　　　　<input class="button" type="reset" value="リセット"></td>
      </tr>

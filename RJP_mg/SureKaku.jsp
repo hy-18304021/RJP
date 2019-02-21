@@ -12,7 +12,6 @@
  <title>Œf¦”Â–¼</title>
  <link rel="stylesheet" href="./Œf¦”Â–¼_files/jlisting.css" type="text/css">
  <link rel="stylesheet" href="./Œf¦”Â–¼_files/745617.css" type="text/css">
- <link rel="alternate" type="application/rss+xml" title="rss" href="http://musouon.bbs.fc2.com/rss/">
  
  <style type="text/css">
  <!--
@@ -55,9 +54,9 @@
  <div id="body" align="center">
 
     <form var="Kakunin" items="${threadKakunin}" method="Post" action ='kakuthread'> 
-        ${Kakunin.thread}<br>
-        ${Kakunin.res_con}<br>
-        <input class="button" type="submit" name="con" value="“Še‚·‚é">
+        <a type='text' name='thread'>${Kakunin.thread}</a><br>
+        <a type='text' name='res'>${Kakunin.res_con}</a><br>
+        <input class="button" type="submit" value="“Še‚·‚é">
     </form>
 
 

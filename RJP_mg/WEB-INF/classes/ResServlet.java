@@ -48,7 +48,7 @@ public class ResServlet{
 		
 		//パラメータをJSPに転送したい↓
 		
-		req.setAttribute("",plist);
+		req.setAttribute("resindx",plist);
 		
 		//転送先のJSPを指定
 		RequestDispatcher dis=req.getRequestDispatcher("/sure");
