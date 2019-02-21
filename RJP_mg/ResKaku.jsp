@@ -53,7 +53,9 @@
 <script type="text/javascript" src="./ŒfŽ¦”Â–¼_files/analyze.js.ƒ_ƒEƒ“ƒ[ƒh" charset="utf-8"></script>
 </font></td></tr></tbody></table><br></center>
  <div id="body" align="center">
-
-
+	<form var="Kakunin" items="${sureKakunin}" method="Post" action ='kakusure'> 
+        ${Kakunin.res_con}<br>
+        <input class="button" type="submit" name="con" value="“Še‚·‚é">
+    </form>
 </body>
 </html>

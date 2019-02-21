@@ -1,5 +1,4 @@
 <web-app>
-	
 	<servlet>
 		<servlet-name>index</servlet-name>
 		<servlet-class>TopServlet</servlet-class>
@@ -30,26 +29,44 @@
 		<url-pattern>/kakuthread</url-pattern>
 	</servlet-mapping>
 	
-    <servlet>
-        <servlet-name>Kakuni</servlet-name>
-        <jsp-file>SureKaku.jsp</jsp-file>
-    </servlet>
+	<servlet>
+		<servlet-name>Top</servlet-name>
+		<jsp-file>/index.jsp</jsp-file>
+	</servlet>
 
-    <servlet-mapping>
-        <servlet-name>Kakuni</servlet-name>
-        <url-pattern>/Surenokakunin</url-pattern>
-    </servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Top</servlet-name>
+		<url-pattern>/tops</url-pattern>
+	</servlet-mapping>
 
-    <servlet>
-        <servlet-name>Top</servlet-name>
-        <jsp-file>index.jsp</jsp-file>
-    </servlet>
+	<servlet>
+		<servlet-name>naka</servlet-name>
+		<jsp-file>/Sure.jsp</jsp-file>
+	</servlet>
 
-    <servlet-mapping>
-        <servlet-name>Top</servlet-name>
-        <url-pattern>/index</url-pattern>
-    </servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>naka</servlet-name>
+		<url-pattern>/sure</url-pattern>
+	</servlet-mapping>
 
-    
+	<servlet>
+		<servlet-name>Kakuni</servlet-name>
+		<jsp-file>/SureKaku.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Kakuni</servlet-name>
+		<url-pattern>/Surenokakunin</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>reskaku</servlet-name>
+		<jsp-file>/ResKaku.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>reskaku</servlet-name>
+		<url-pattern>/reskak</url-pattern>
+	</servlet-mapping>
 
 </web-app>
