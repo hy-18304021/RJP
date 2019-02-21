@@ -88,7 +88,7 @@ public class QueryTest{
 			System.out.println("接続完了");
 			
 			//select文
-			String sql="select res_con from res_table";
+			String sql="select res_number,res_cont_time ,res_con from res_table";
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();
@@ -102,7 +102,11 @@ public class QueryTest{
 			while(rs.next()){
 				ResClreate res = new ResClreate();
 				
-				String name = rs.getString(1);	//1列目のデータを取得
+				int number = rs.getInt(1);	//1列目のデータを取得
+				String time = rs.getString(2);	//1列目のデータを取得
+				String name = rs.getString(3);	//1列目のデータを取得
+				res.res_numberSet(number);
+				res.res_cont_timeSet(name);
 				res.res_conSet(name);
 				
 				resList.add(res);

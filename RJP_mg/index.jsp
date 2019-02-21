@@ -6,6 +6,7 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <!-- saved from url=(0027)http://musouon.bbs.fc2.com/ -->
+<<<<<<< HEAD
 <html lang="ja">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -53,6 +54,21 @@
     <script type="text/javascript" src="./掲示板名_files/analyze.js.ダウンロード" charset="utf-8"></script>
     </font></td></tr></tbody></table><br></center>
     <div id="body" align="center">
+=======
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 
+ <meta http-equiv="content-style-type" content="text/css">
+ <title>掲示板名</title>
+ <link rel="stylesheet" href="./掲示板名_files/jlisting.css" type="text/css">
+ <link rel="stylesheet" href="./掲示板名_files/745617.css" type="text/css">
+ <link rel="alternate" type="application/rss+xml" title="rss" href="http://musouon.bbs.fc2.com/rss/">
+ 
+ <style type="text/css">
+ <!--
+ body {
+	margin: 0;
+	padding: 0;
+>>>>>>> fcfab0430b131472cbf2b8760d29d02f2dcd0f5b
 
     <p id="title"></p>
     <div id="counter"><div id="counter">90141919</div></div>進級に必要な掲示板だよ。
@@ -87,6 +103,7 @@
     <input type="hidden" name="pos" value="30">
     <input class="button" type="submit" name="" value="スレッド一覧へ">
   </form>
+<<<<<<< HEAD
   <br>
   <br>
   <br>
@@ -122,6 +139,33 @@
     </tbody>
   </table>
   </div>
+=======
+
+<br>
+<br>
+<br>
+
+  <form id="bbsform"  action="Surenokakunin" method="POST" enctype="multipart/form-data">
+   <div id="bbsform2">
+    <table border="0" method = 'Post' action ='topp'>
+     <tbody>
+     <tr>
+      <td nowrap>件名</td>
+      <td><input type="text" name="dai" size="30"></td>
+     </tr>
+     <tr>
+      <td colspan="2">
+       <textarea name="msg" rows="7" cols="48"></textarea>
+      </td>
+     </tr>
+     <tr>
+      <td colspan="2">
+       <input class="button" type="submit" value="投稿">
+　　　　<input class="button" type="reset" value="リセット"></td>
+     </tr>
+    </tbody></table>
+   </div>
+>>>>>>> fcfab0430b131472cbf2b8760d29d02f2dcd0f5b
   </form>
   </div><!---->
   </body>

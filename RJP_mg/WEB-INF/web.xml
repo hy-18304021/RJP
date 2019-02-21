@@ -1,72 +1,72 @@
 <web-app>
 	<servlet>
-		<servlet-name>index</servlet-name>
+		<servlet-name>Top</servlet-name>
 		<servlet-class>TopServlet</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
-		<servlet-name>index</servlet-name>
-		<url-pattern>/topp</url-pattern>
+		<servlet-name>Top</servlet-name>
+		<url-pattern>/Tops</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>res</servlet-name>
+		<servlet-name>Res</servlet-name>
 		<servlet-class>ResServlet</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
-		<servlet-name>res</servlet-name>
-		<url-pattern>/reskaku</url-pattern>
+		<servlet-name>Res</servlet-name>
+		<url-pattern>/Ress</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>thread</servlet-name>
+		<servlet-name>Thread</servlet-name>
 		<servlet-class>ThreadServlet</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
-		<servlet-name>thread</servlet-name>
-		<url-pattern>/kakuthread</url-pattern>
+		<servlet-name>Thread</servlet-name>
+		<url-pattern>/Threads</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>Top</servlet-name>
+		<servlet-name>index</servlet-name>
 		<jsp-file>/index.jsp</jsp-file>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>Top</servlet-name>
-		<url-pattern>/tops</url-pattern>
+		<servlet-name>index</servlet-name>
+		<url-pattern>/Topp</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
-		<servlet-name>naka</servlet-name>
-		<jsp-file>/Sure.jsp</jsp-file>
+		<servlet-name>Thread</servlet-name>
+		<jsp-file>/Thread.jsp</jsp-file>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>naka</servlet-name>
-		<url-pattern>/sure</url-pattern>
+		<servlet-name>Thread</servlet-name>
+		<url-pattern>/Thread</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
-		<servlet-name>Kakuni</servlet-name>
-		<jsp-file>/SureKaku.jsp</jsp-file>
+		<servlet-name>Kakunin</servlet-name>
+		<jsp-file>/ThreadKaku.jsp</jsp-file>
 	</servlet>
 	
 	<servlet-mapping>
-		<servlet-name>Kakuni</servlet-name>
-		<url-pattern>/Surenokakunin</url-pattern>
+		<servlet-name>Kakunin</servlet-name>
+		<url-pattern>/Threadkakunin</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>reskaku</servlet-name>
+		<servlet-name>Reskaku</servlet-name>
 		<jsp-file>/ResKaku.jsp</jsp-file>
 	</servlet>
 	
 	<servlet-mapping>
-		<servlet-name>reskaku</servlet-name>
-		<url-pattern>/reskak</url-pattern>
+		<servlet-name>Reskaku</servlet-name>
+		<url-pattern>/Reskak</url-pattern>
 	</servlet-mapping>
 
 </web-app>

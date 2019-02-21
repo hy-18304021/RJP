@@ -28,6 +28,7 @@ public class TopServlet{
 		list.add(thread);
 		list.add(res_con);
 		
+		System.out.println("list‚É‚Í“ü‚Á‚½");
 		req.setAttribute("threadKakunin",list);
 		
 		RequestDispatcher dis=req.getRequestDispatcher("/Surenokakunin");

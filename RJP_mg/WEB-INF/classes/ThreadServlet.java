@@ -17,8 +17,8 @@ public class ThreadServlet{
  		req.setCharacterEncoding("Windows-31J");
 		
 		//スレッドのタイトルと最初のレスの作成
-		String title=req.getParameter("con");
-		String new_res=req.getParameter("con");
+		String title=req.getParameter("thread");
+		String new_res=req.getParameter("res");
 		
 		if(title==null||title.length()==0){
 			System.out.println("タイトルfalse");
