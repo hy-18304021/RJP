@@ -57,7 +57,7 @@
     <form var="Kakunin" items="${threadKakunin}" method="Post" action ='kakuthread'> 
         ${Kakunin.thread}<br>
         ${Kakunin.res_con}<br>
-        <input class="button" type="submit" name="" value="“Še‚·‚é">
+        <input class="button" type="submit" name="con" value="“Še‚·‚é">
     </form>
 
 

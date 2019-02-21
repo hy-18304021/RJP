@@ -20,8 +20,8 @@ public class TopServlet{
  		req.setCharacterEncoding("Windows-31J");
 		
 		//スレッド名とレスの受け取り
-		String thread=req.getParameter("");
-		String res_con=req.getParameter("");
+		String thread=req.getParameter("dai");
+		String res_con=req.getParameter("msg");
 		
 		List<String> list=new ArrayList<>();
 		
