@@ -28,6 +28,16 @@
 		<servlet-name>Threadservlet</servlet-name>
 		<url-pattern>/Threadservlet</url-pattern>
 	</servlet-mapping>
+		
+	<servlet>
+		<servlet-name>Allthreadservlet</servlet-name>
+		<servlet-class>AllThreadServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Allthreadservlet</servlet-name>
+		<url-pattern>/AllThreadservlet</url-pattern>
+	</servlet-mapping>
 	
 	<servlet>
 		<servlet-name>index</servlet-name>
@@ -68,5 +78,16 @@
 		<servlet-name>Reskaku</servlet-name>
 		<url-pattern>/Reskak</url-pattern>
 	</servlet-mapping>
+
+		<servlet>
+		<servlet-name>Allthread</servlet-name>
+		<jsp-file>/Allthread.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Allthread</servlet-name>
+		<url-pattern>/Allthread</url-pattern>
+	</servlet-mapping>
+
 
 </web-app>

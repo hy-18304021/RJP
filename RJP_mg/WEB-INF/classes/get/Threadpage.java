@@ -2,7 +2,7 @@
 package get;
 import java.util.Date;
 import java.util.ArrayList;
-public class Thread{
+public class Threadpage{
 	private int thread_number;
 	private int res_id;
 	private String thread_name="";

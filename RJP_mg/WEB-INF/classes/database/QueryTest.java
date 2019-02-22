@@ -6,16 +6,16 @@ import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
-import get.Thread;
+import get.Threadpage;
 import get.ResClreate;
 import java.util.List;
 import java.util.ArrayList;
 
 public class QueryTest{
 	
-	public static List<Thread> getThreadList(){
+	public static List<Threadpage> getThreadList(){
 		
-		List<Thread> threadList = new ArrayList<Thread>();
+		List<Threadpage> threadList = new ArrayList<>();
 	
 	
 		try{
@@ -39,18 +39,18 @@ public class QueryTest{
 
 			//カーソルを一行だけスクロールし、データをフェッチする
 			while(rs.next()){
-				Thread thread = new Thread();
+				Threadpage threadpage = new Threadpage();
 				
 				String name = rs.getString(1);	//1列目のデータを取得
 				int res_count = rs.getInt(2);	//2列目のデータを取得
 				String create_time = rs.getString(3);	//3列目のデータを取得
 				String update_time = rs.getString(4);	//4列目のデータを取得
-				thread.thread_nameSet(name);
-				thread.res_idSet(res_count);
-				thread.thread_create_timeSet(create_time);
-				thread.thread_update_timeSet(update_time);
+				threadpage.thread_nameSet(name);
+				threadpage.res_idSet(res_count);
+				threadpage.thread_create_timeSet(create_time);
+				threadpage.thread_update_timeSet(update_time);
 				
-				threadList.add(thread);
+				threadList.add(threadpage);
 				
 				//System.out.println("username"+"\t"+"password"); //確認表示
 				//System.out.println(name+"\t"+pass);				//確認その２

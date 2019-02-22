@@ -55,38 +55,32 @@
 
   <p id="title"></p>
 <div id="counter"><div id="counter">90141919</div></div>進級に必要な掲示板だよ。
-  <p id="navi_bar"><a href="https://ameblo.jp/zaitesu-kaku/">一覧（新規投稿）</a>｜<a href="https://ameblo.jp/zaitesu-kaku/">ワード検索</a>｜<a href="https://ameblo.jp/zaitesu-kaku/" target="_top">管理</a></p>
+  <from >
+  <table id="skin1" cellpadding="0" cellspacing="0">
+   <tbody><tr>
+    <td>
+     <table width="100%" cellpadding="4" cellspacing="1">
+      <tbody>
+      <tr class="th">
+       <th><span class="subj">タイトル</span></th>
+       <th><span class="subj">件数</span></th>
+       <th><span class="subj">作成日時</span></th>
+       <th><span class="subj">最終更新日時</span></th>
+      </tr>
+      <c:forEach var="thr" items="${threadindex}"> 
+      <tr class="td">
+       <td>${thr.thread_name}</td>
+       <td>${thr.res_count}</td>
+       <td>${thr.thread_create_time}</td>
+       <td>${thr.thread_update_time}</td>
+      </tr>
+      </c:forEach>
+     </tbody></table>
+    </td>
+   </tr>
+  </tbody></table>
+  </from>
   
-
-  <form class="inline_button" action="AllThreadservlet" method="Get">
-  <input class="button" type="submit" value="スレッド一覧へ">
-  </form>
-
-<br>
-<br>
-<br>
-
-  <form id="bbsform"  method='Post' action='Threadservlet'>
-    <table border="0">
-     <tbody>
-     <tr>
-      <td nowrap>件名</td>
-      <td><input type="text" name='Thread_name' size="30"></td>
-     </tr>
-     <tr>
-      <td colspan="2">
-       <textarea name='Res' rows="7" cols="48"></textarea>
-      </td>
-     </tr>
-     <tr>
-      <td colspan="2" align="center">
-		<input class="button" type='submit' value="投稿">
-		<input class="button" type='reset' value="リセット">
-     </tr>
-	</td>
-    </tbody></table>
-  </form>
-
  </div>
 </body>
 </html>

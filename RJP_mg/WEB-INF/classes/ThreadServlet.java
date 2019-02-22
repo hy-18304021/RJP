@@ -7,8 +7,10 @@ import javax.servlet.ServletException;
 import javax.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import database.InsertTest;
 import database.QueryTest;
+import get.Threadpage;
 
 public class ThreadServlet extends HttpServlet{
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
@@ -35,15 +37,25 @@ public class ThreadServlet extends HttpServlet{
 		InsertTest.insertThread(title,new_res);
 		
 		System.out.println("¬Œ÷");
-		//“]‘—æ‚ÌJSP‚ğw’è
-		RequestDispatcher dis3=req.getRequestDispatcher("/Topp");
 		
-		System.out.println("JSP¬Œ÷");
+		
+		//“]‘—æ‚ÌJSP‚ğw’è
+		RequestDispatcher dis=req.getRequestDispatcher("/Topp");
+		
+		
 		//ƒpƒ‰ƒ[ƒ^‚ğJSP‚É“]‘—
-		dis3.forward(req,res);
+		dis.forward(req,res);
+		System.out.println("JSP¬Œ÷");
 	}
 	
 	public void doGet(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
 	}
+	
+	public List<Threadpage> getList(){
+		List<Threadpage> plist=QueryTest.getThreadList();
+		
+		return plist;
+	}
+	
 }
