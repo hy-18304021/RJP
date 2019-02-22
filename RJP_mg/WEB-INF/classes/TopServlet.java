@@ -23,6 +23,8 @@ public class TopServlet extends HttpServlet{
 		String thread=req.getParameter("Thread");
 		String res_con=req.getParameter("Res");
 		
+		System.out.println("スレッド名とレスを受け取った");
+		
 		List<String> list=new ArrayList<>();
 		
 		list.add(thread);

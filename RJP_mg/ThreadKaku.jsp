@@ -54,8 +54,8 @@
  <div id="body" align="center">
 
     <form var="Kakunin" items="${threadKakunin}" method="Post" action ='Threads'> 
-        <a type='text' name='thread'>${Kakunin.thread}</a><br>
-        <a type='text' name='res'>${Kakunin.res_con}</a><br>
+        <a name='thread'>${Kakunin.thread}</a><br>
+        <a name='res'>${Kakunin.res_con}</a><br>
         <input class="button" type="submit" value="“Še‚·‚é">
     </form>
 
