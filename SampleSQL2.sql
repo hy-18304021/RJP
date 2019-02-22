@@ -6,6 +6,9 @@ conn maguser/magpass
 
 drop table res_table;
 drop table thread_table;
+drop SEQUENCE s_thread_number;
+drop SEQUENCE s_res_number;
+drop SEQUENCE s_res_id;
 
 
 create table thread_table(
@@ -23,6 +26,10 @@ create table res_table(
 	res_con varchar2(400) NOT NULL,
 	res_cont_time date DEFAULT SYSDATE UNIQUE
 );
+
+CREATE SEQUENCE s_thread_number START WITH 1 INCREMENT BY 1;
+CREATE SEQUENCE s_res_number START WITH 1 INCREMENT BY 1;
+CREATE SEQUENCE s_res_id START WITH 1 INCREMENT BY 1;
 
 commit;
 

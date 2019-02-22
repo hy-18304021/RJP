@@ -65,14 +65,8 @@
       </c:forEach>
     </table>
 
-    <table border="0" method = 'Post' action ='topp'>
+    <table border="0" method = 'Post' action ='Resservlet'>
      <tbody>
-     <tr>
-      <td>
-       <noscript>JavaScriptを有効にすると、絵文字簡単ウィンドウが使えます</noscript>
-       </small>
-      </td>
-     </tr>
      <tr>
       <td colspan="2">
        <textarea name="msg" rows="7" cols="48"></textarea>

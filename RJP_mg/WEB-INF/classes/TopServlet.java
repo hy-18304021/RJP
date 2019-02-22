@@ -30,8 +30,8 @@ public class TopServlet extends HttpServlet{
 		list.add(thread);
 		list.add(res_con);
 		
-		System.out.println("list‚É“ü‚Á‚Ä‚¢‚é");
-		req.setAttribute("threadKakunin",list);
+		System.out.println(list);
+		req.setAttribute("ThreadRes",list);
 		
 		RequestDispatcher dis=req.getRequestDispatcher("/Threadkakunin");
 		dis.forward(req,res);

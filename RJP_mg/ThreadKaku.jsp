@@ -5,7 +5,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<!-- saved from url=(0027)http://musouon.bbs.fc2.com/ -->
 <html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  
  <meta http-equiv="content-style-type" content="text/css">
@@ -44,22 +43,17 @@
 <br>
 <b>yŒf¦”Â—˜—p‹K–ñz</b>
 
-<b></b><br>
-<center></center>
-<br>
-<font color="#FF0000"><br>
-
-<script type="text/javascript" src="./Œf¦”Â–¼_files/analyze.js.ƒ_ƒEƒ“ƒ[ƒh" charset="utf-8"></script>
-</font></td></tr></tbody></table><br></center>
+</center>
  <div id="body" align="center">
 
-    <form var="Kakunin" items="${threadKakunin}" method="Post" action ='Threads'> 
-        <a name='thread'>${Kakunin.thread}</a><br>
-        <a name='res'>${Kakunin.res_con}</a><br>
+    <form method='Post' action ='Threadservlet'> 
+        <table>
+        <tr><td>${ThreadRes.thread}</td></tr>
+        <tr><td>${ThreadRes.res_con}</td></tr>
+        </table>
         <input class="button" type="submit" value="“Še‚·‚é">
     </form>
 
 
-
+</div>
 </body>
-</html>

@@ -39,7 +39,7 @@
  </style>
 
 </head>
-
+<body>
 <center><table width="800px" bgcolor="#000000" cellspacing="1" cellpadding="5"><tbody><tr><td bgcolor="#aaaaaa" align="center">ここは進級のための掲示板です。<br>
 <br>
 <b>【掲示板利用規約】</b>
@@ -69,21 +69,20 @@
        <th><span class="subj">作成日時</span></th>
        <th><span class="subj">最終更新日時</span></th>
       </tr>
-      <c:forEach var="thread" items="${threadindx}"> 
+      <c:forEach var="thread" items="${threadindex}"> 
       <tr class="td">
-       <td>${thead.name}</td>
-       <td>${thead.kensu}</td>
-       <td>${thead.Makethead}</td>
-       <td>${thead.Newthead}</td>
+       <td>${thread.thread_name}</td>
+       <td>${thread.res_id}</td>
+       <td>${thread.thread_create_time}</td>
+       <td>${thread.thread_update_time}</td>
       </tr>
       </c:forEach>
      </tbody></table>
     </td>
    </tr>
-  </tbody></table><!---->
+  </tbody></table>
 
   <form class="inline_button" action="https://ameblo.jp/zaitesu-kaku/" method="POST">
-  <input type="hidden" name="pos" value="30">
   <input class="button" type="submit" name="" value="スレッド一覧へ">
   </form>
 
@@ -91,25 +90,27 @@
 <br>
 <br>
 
-  <form id="bbsform" action="Tops" method="POST" enctype="multipart/form-data">
+  <form id="bbsform"  method='Post' action='Threadservlet'>
     <table border="0">
      <tbody>
      <tr>
       <td nowrap>件名</td>
-      <td><input type="text" name="Thread" value="" size="30"></td>
+      <td><input type="text" name='Thread_name' size="30"></td>
      </tr>
      <tr>
       <td colspan="2">
-       <textarea name="Res" rows="7" cols="48"></textarea>
+       <textarea name='Res' rows="7" cols="48"></textarea>
       </td>
      </tr>
      <tr>
       <td colspan="2" align="center">
-		<input class="button" type="submit" value="投稿">
-		<input class="button" type="reset" value="リセット">
+		<input class="button" type='submit' value="投稿">
+		<input class="button" type='reset' value="リセット">
      </tr>
+	</td>
     </tbody></table>
-</td>
   </form>
 
  </div>
+</body>
+</html>

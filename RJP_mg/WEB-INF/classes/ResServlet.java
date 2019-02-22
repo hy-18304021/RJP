@@ -42,6 +42,8 @@ public class ResServlet extends HttpServlet{
 	public void doGet(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
 		
+		req.setCharacterEncoding("Windows-31J");
+		
 		//データベースからリストをもらいたい
 		List<ResClreate> plist=getList();
 		
