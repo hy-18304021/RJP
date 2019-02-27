@@ -67,12 +67,12 @@
        <th><span class="subj">ì¬“ú</span></th>
        <th><span class="subj">ÅIXV“ú</span></th>
       </tr>
-      <c:forEach var="thr" items="${threadindex}"> 
+      <c:forEach var="thr" items="${threadindex}">
       <tr class="td">
-       <td>${thr.thread_name}</td>
-       <td>${thr.res_count}</td>
-       <td>${thr.thread_create_time}</td>
-       <td>${thr.thread_update_time}</td>
+       <td>${thr.threadname}</td>
+       <td>${thr.resid}</td>
+       <td>${thr.threadcreatetime}</td>
+       <td>${thr.threadupdatetime}</td>
       </tr>
       </c:forEach>
      </tbody></table>

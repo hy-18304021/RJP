@@ -55,10 +55,9 @@
 
   <p id="title"></p>
 <div id="counter"><div id="counter">90141919</div></div>進級に必要な掲示板だよ。
-  <p id="navi_bar"><a href="https://ameblo.jp/zaitesu-kaku/">一覧（新規投稿）</a>｜<a href="https://ameblo.jp/zaitesu-kaku/">ワード検索</a>｜<a href="https://ameblo.jp/zaitesu-kaku/" target="_top">管理</a></p>
   
 
-  <form class="inline_button" action="AllThreadservlet" method="Get">
+  <form class="inline_button" method="Post" action="AllThreadservlet"><br>
   <input class="button" type="submit" value="スレッド一覧へ">
   </form>
 

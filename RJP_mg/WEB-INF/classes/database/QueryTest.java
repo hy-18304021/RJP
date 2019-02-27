@@ -13,6 +13,18 @@ import java.util.ArrayList;
 
 public class QueryTest{
 	
+	public static void main(String[] args){
+		List<Threadpage> al=getThreadList();
+		
+		System.out.println();
+		
+		for(int i = 0; i < al.size();i++){
+			Threadpage prof = al.get(i);
+			System.out.println(prof.thread_nameGet()+"\t"+prof.thread_nameGet());
+		
+		}
+	}
+	
 	public static List<Threadpage> getThreadList(){
 		
 		List<Threadpage> threadList = new ArrayList<>();
@@ -27,7 +39,7 @@ public class QueryTest{
 			System.out.println("接続完了");
 			
 			//select文
-			String sql="select thread_name,count(res_id),thread_create_time,thread_update_time from thread_table GROUP BY thread_name,thread_create_time,thread_update_time";
+			String sql="select thread_name,res_id,thread_create_time,thread_update_time from thread_table";
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();
@@ -41,19 +53,20 @@ public class QueryTest{
 			while(rs.next()){
 				Threadpage threadpage = new Threadpage();
 				
-				String name = rs.getString(1);	//1列目のデータを取得
-				int res_count = rs.getInt(2);	//2列目のデータを取得
-				String create_time = rs.getString(3);	//3列目のデータを取得
-				String update_time = rs.getString(4);	//4列目のデータを取得
-				threadpage.thread_nameSet(name);
-				threadpage.res_idSet(res_count);
-				threadpage.thread_create_timeSet(create_time);
-				threadpage.thread_update_timeSet(update_time);
+				String thread_name = rs.getString(1);	//1列目のデータを取得
+				String res_id = rs.getString(2);	//2列目のデータを取得
+				String thread_create_time = rs.getString(3);	//3列目のデータを取得
+				String thread_update_time = rs.getString(4);	//4列目のデータを取得
+				
+				threadpage.thread_nameSet(thread_name);
+				threadpage.res_idSet(res_id);
+				threadpage.thread_create_timeSet(thread_create_time);
+				threadpage.thread_update_timeSet(thread_update_time);
 				
 				threadList.add(threadpage);
 				
-				//System.out.println("username"+"\t"+"password"); //確認表示
-				//System.out.println(name+"\t"+pass);				//確認その２
+				//System.out.println("thread_name"+"\t"+"res_id"+"\t"+"create_time"+"\t"+"update_time"); //確認表示
+				System.out.println(thread_name+"\t"+res_id+"\t"+thread_create_time+"\t"+thread_update_time);				//確認その２
 			}
 
 			
@@ -132,5 +145,4 @@ public class QueryTest{
 		return resList;
 		
 	}
-	
 }

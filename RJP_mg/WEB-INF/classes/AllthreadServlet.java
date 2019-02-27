@@ -6,36 +6,38 @@ import javax.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
-import database.InsertTest;
 import database.QueryTest;
 import get.Threadpage;
 
 public class AllThreadServlet extends HttpServlet{
+	
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
-	}
-	
-	public void doGet(HttpServletRequest req,HttpServletResponse res)
-	throws IOException,ServletException{
-		 req.setCharacterEncoding("Windows-31J");
+		
+		req.setCharacterEncoding("Windows-31J");
 		
 		//データベースからリストをもらいたい
-		//List<Threadpage> plist=getList();
-		
+		List<Threadpage> plist=getList();
 		
 		//パラメータをJSPに転送したい↓
-		//req.setAttribute("threadindex",plist);
+		req.setAttribute("threadindex",plist);
 		
 		//転送先のJSPを指定
-		RequestDispatcher dis=req.getRequestDispatcher("/Allthread");
+		RequestDispatcher dis=req.getRequestDispatcher("/SetAllThread");
+		
+		System.out.println("行けます");
 		
 		//パラメータをJSPに転送
 		dis.forward(req,res);
-		
+		}
+	
+	public void doGet(HttpServletRequest req,HttpServletResponse res)
+	throws IOException,ServletException{
 	}
 	
 	public List<Threadpage> getList(){
 		List<Threadpage> plist=QueryTest.getThreadList();
+		
 		
 		return plist;
 	}

@@ -1,62 +1,50 @@
 //スレッドを立てるために必要な情報を格納する入れ物的な役割
 package get;
-import java.util.Date;
-import java.util.ArrayList;
+
 public class Threadpage{
-	private int thread_number;
-	private int res_id;
-	private String thread_name="";
-	//dateはstringでとることにする。
-	//private Date CreatedDate=null;
-	//private Date LastUpdate=null;
-	private String thread_create_time=null;
-	private String thread_update_time=null;
-	private String user_name="";
+	private int threadnumber;
+	private String resid="";
+	private String threadname="";
+	private String threadcreatetime="";
+	private String threadupdatetime="";
 	
 	public void thread_numberSet(int id){
-		thread_number=id;
+		threadnumber=id;
 	}
 	
-	public void res_idSet(int res){
-		res_id=res;
+	public void res_idSet(String res){
+		resid=res;
 	}
 	
 	public void thread_nameSet(String title){
-		thread_name=title;
+		threadname=title;
 	}
 	
 	public void thread_create_timeSet(String time){
-		thread_create_time=time;
+		threadcreatetime=time;
 	}
 	
 	public void thread_update_timeSet(String time){
-		thread_update_time=time;
-	}
-	public void user_nameSet(String name){
-		user_name=name;
+		threadupdatetime=time;
 	}
 	
 	public int thread_numberGet(){
-		return thread_number;
+		return threadnumber;
 	}
 	
-	public int res_idGet(){
-		return res_id;
+	public String res_idGet(){
+		return resid;
 	}
 	
 	public String thread_nameGet(){
-		return thread_name;
+		return threadname;
 	}
 	
 	public String thread_create_timeGet(){
-		return thread_create_time;
+		return threadcreatetime;
 	}
 	
 	public String thread_update_timeGet(){
-		return thread_update_time;
+		return threadupdatetime;
 	}
-	public String user_nameGet(){
-		return user_name;
-	}
-	
 }

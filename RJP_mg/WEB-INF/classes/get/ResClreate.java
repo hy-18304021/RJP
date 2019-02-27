@@ -9,7 +9,6 @@ public class ResClreate{
 	//date‚ÍString‚É‚·‚é
 	//private Date ResTime;
 	private String res_cont_time=null;
-	private String user_name="";
 	
 	public void res_numberSet(int number){
 		res_number=number;
@@ -50,14 +49,6 @@ public class ResClreate{
 	
 	public String res_cont_timeGet(){
 		return res_cont_time;
-	}
-		
-	public void user_nameSet(String name){
-		user_name=name;
-	}
-	
-	public String user_nameGet(){
-		return user_name;
 	}
 	
 }

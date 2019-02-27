@@ -86,7 +86,7 @@
 	
 	<servlet-mapping>
 		<servlet-name>Allthread</servlet-name>
-		<url-pattern>/Allthread</url-pattern>
+		<url-pattern>/SetAllThread</url-pattern>
 	</servlet-mapping>
 
 
