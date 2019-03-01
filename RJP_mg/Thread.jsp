@@ -27,7 +27,7 @@
 <c:forEach var="res" items="${resindx}"> 
     <table>
       <tr class="td">
-       <td>${res.res_Number}</td><td>${res.res_Time}</td>
+       <td>${res.res_Time}</td>
        <td>${res.res_Con}</td>
       </tr>
       </c:forEach>

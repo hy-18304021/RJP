@@ -36,14 +36,12 @@
       <tbody>
       <tr class="th">
        <th><span class="subj">スレッド名</span></th>
-       <th><span class="subj">件数</span></th>
        <th><span class="subj">作成日時</span></th>
        <th><span class="subj">最終更新日時</span></th>
       </tr>
       <c:forEach var="thr" items="${threadindex}">
       <tr class="td">
        <td><a href="Resservlet?thread_Name=${thr.thread_Name}">${thr.thread_Name}</a></td>
-       <td>${thr.res_Id}</td>
        <td>${thr.thread_Create_Time}</td>
        <td>${thr.thread_Update_Time}</td>
       </tr>

@@ -21,12 +21,17 @@ public class ResServlet extends HttpServlet{
 		//スレッドの名前を受け取る
 		String title=req.getParameter("thread_Name");
 		
-		
 		//レスの作成
 		String new_res=req.getParameter("Res");
 		
-		
 		InsertTest.insertRes(title,new_res);
+		
+		//データベースからリストをもらいたい
+		List<ResClreate> plist=getList(title);
+		
+		
+		//パラメータをJSPに転送したい↓
+		req.setAttribute("resindx",plist);
 		
 		//転送先のJSPを指定
 		RequestDispatcher dis=req.getRequestDispatcher("/Thread");

@@ -100,7 +100,7 @@ public class QueryTest{
 			System.out.println("接続完了");
 			
 			//select文
-			String sql="select res_number,res_time,res_con,thread_name from res_table where thread_name='"+id+"'";
+			String sql="select res_time,res_con,thread_name from res_table where thread_name='"+id+"'";
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();
@@ -114,11 +114,9 @@ public class QueryTest{
 			while(rs.next()){
 				ResClreate res = new ResClreate();
 				
-				int number = rs.getInt(1);	//1列目のデータを取得
-				String time = rs.getString(2);	//2列目のデータを取得
-				String con = rs.getString(3);	//3列目のデータを取得
-				String name = rs.getString(4);	//3列目のデータを取得
-				res.setRes_Number(number);
+				String time = rs.getString(1);	//2列目のデータを取得
+				String con = rs.getString(2);	//3列目のデータを取得
+				String name = rs.getString(3);	//3列目のデータを取得
 				res.setRes_Time(time);
 				res.setRes_Con(con);
 				res.setThread_Name(name);
@@ -126,7 +124,7 @@ public class QueryTest{
 				resList.add(res);
 				
 				//System.out.println("username"+"\t"+"password"); //確認表示
-				System.out.println(number+"\t"+time+"\t"+con+"\t"+name);				//確認その２
+				System.out.println(time+"\t"+con+"\t"+name);				//確認その２
 			}
 
 			
