@@ -9,6 +9,26 @@
  
  <meta http-equiv="content-style-type" content="text/css">
  <title>掲示板名</title>
+ <script type="text/javascript"> 
+  <!-- 
+  function check(){
+    var flag = 0;
+    // 設定開始（必須にする項目を設定してください）
+    if(document.form1.Thread_name.value == ""){ // 「お名前」の入力をチェック
+      flag = 1;
+    }
+    else if(document.form1.Res.value == ""){ // 「パスワード」の入力をチェック
+      flag = 1;
+    }
+    if(flag){
+      window.alert('必須項目に未入力がありました'); // 入力漏れがあれば警告ダイアログを表示
+      return false; // 送信を中止
+    }
+    else{
+      return true; // 送信を実行
+    }
+  }
+  </script>
  <link rel="stylesheet" href="./掲示板名_files/jlisting.css" type="text/css">
  <link rel="stylesheet" href="./掲示板名_files/745617.css" type="text/css">
  <link rel="alternate" type="application/rss+xml" title="rss" href="http://musouon.bbs.fc2.com/rss/">
@@ -65,7 +85,7 @@
 <br>
 <br>
 
-  <form id="bbsform"  method='Post' action='Threadservlet'>
+  <form id="bbsform"  method='Post' action='Threadservlet' name="form1" onSubmit="return check()">
     <table border="0">
      <tbody>
      <tr>
@@ -79,11 +99,12 @@
      </tr>
      <tr>
       <td colspan="2" align="center">
-		<input class="button" type='submit' value="投稿">
+		<input class="button" type='submit' value="投稿" name="form1" onSubmit="return check()>
 		<input class="button" type='reset' value="リセット">
      </tr>
 	</td>
-    </tbody></table>
+    </tbody>
+  </table>
   </form>
 
  </div>
