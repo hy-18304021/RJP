@@ -1,11 +1,11 @@
 <%@ page pageEncoding="Windows-31J"
-	contentType="text/html;charset=Windows-31J" %>
+	contentType="text/html;charset=UTF-8" %>
 
 <%--JSTL 1.1.2 core タグライブラリ--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="ja"><head>
  
  <meta http-equiv="content-style-type" content="text/css">
  <title>掲示板名</title>
@@ -55,6 +55,11 @@
 
   <p id="title"></p>
 <div id="counter"><div id="counter">90141919</div></div>進級に必要な掲示板だよ。
+
+  <form class="inline_button" action="Topp"><br>
+  <input class="button" type="submit" value="トップページへ">
+  </form>
+
   <from >
   <table id="skin1" cellpadding="0" cellspacing="0">
    <tbody><tr>
@@ -69,10 +74,10 @@
       </tr>
       <c:forEach var="thr" items="${threadindex}">
       <tr class="td">
-       <td>${thr.threadname}</td>
-       <td>${thr.resid}</td>
-       <td>${thr.threadcreatetime}</td>
-       <td>${thr.threadupdatetime}</td>
+       <td><a href="Resservlet?thread_Name=${thr.thread_Name}">${thr.thread_Name}</a></td>
+       <td>${thr.res_Id}</td>
+       <td>${thr.thread_Create_Time}</td>
+       <td>${thr.thread_Update_Time}</td>
       </tr>
       </c:forEach>
      </tbody></table>
@@ -80,6 +85,8 @@
    </tr>
   </tbody></table>
   </from>
+  
+
   
  </div>
 </body>

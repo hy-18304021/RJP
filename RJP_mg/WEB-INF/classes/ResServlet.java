@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 import database.QueryTest;
 import java.util.List;
 import database.InsertTest;
-import get.ResClreate;
+import magcap.ResClreate;
 
 public class ResServlet extends HttpServlet{
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
@@ -44,12 +44,16 @@ public class ResServlet extends HttpServlet{
 		
 		req.setCharacterEncoding("Windows-31J");
 		
+		//スレッドの名前を受け取る
+		String title=req.getParameter("thread_Name");
+		
+		System.out.println(title);
+		
 		//データベースからリストをもらいたい
-		List<ResClreate> plist=getList();
+		List<ResClreate> plist=getList(title);
 		
 		
 		//パラメータをJSPに転送したい↓
-		
 		req.setAttribute("resindx",plist);
 		
 		//転送先のJSPを指定
@@ -58,10 +62,9 @@ public class ResServlet extends HttpServlet{
 		//パラメータをJSPに転送
 		dis.forward(req,res);
 		
-		
 	}
-	public List<ResClreate> getList(){
-		List<ResClreate> plist=QueryTest.getResList();
+	public List<ResClreate> getList(String title){
+		List<ResClreate> plist=QueryTest.getResList(title);
 		
 		return plist;
 	}

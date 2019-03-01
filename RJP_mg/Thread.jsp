@@ -51,33 +51,35 @@
 <font color="#FF0000"><br>
 
 <script type="text/javascript" src="./掲示板名_files/analyze.js.ダウンロード" charset="utf-8"></script>
-
+</center></td>
 <form var="Title" items="${title}" method="Post" action ='titlehyoji'> 
-        ${Title.threadName}<br>
+        ${Title.thread_Name}<br>
     </form>
 
 <c:forEach var="res" items="${resindx}"> 
     <table>
       <tr class="td">
-       <td>${res.number}</td><td>${res.time}</td>
-       <td>${res.naiyou}</td>
+       <td>${res.res_Number}</td><td>${res.res_Cont_Time}</td>
+       <td>${res.res_Con}</td>
       </tr>
       </c:forEach>
     </table>
 
-    <table border="0" method = 'Post' action ='Resservlet'>
+	<from method='Post' action='Resservlet'>
+    <table border="0">
      <tbody>
      <tr>
       <td colspan="2">
-       <textarea name="msg" rows="7" cols="48"></textarea>
+       <textarea name='Res' rows="7" cols="48"></textarea>
       </td>
      </tr>
      <tr>
       <td colspan="2" align="center">
-       <input class="button" type="submit" value="投稿">
-		<input class="button" type="reset" value="リセット"></td>
+		<input class="button" type='submit' value="投稿">
+		<input class="button" type='reset' value="リセット">
      </tr>
-    </tbody>
-    </table>
+	</td>
+    </tbody></table>
+  </form>
     </body>
     </html>

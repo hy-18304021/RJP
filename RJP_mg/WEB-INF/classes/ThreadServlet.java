@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 import java.util.List;
 import database.InsertTest;
 import database.QueryTest;
-import get.Threadpage;
+import magcap.Threadpage;
 
 public class ThreadServlet extends HttpServlet{
 	public void doPost(HttpServletRequest req,HttpServletResponse res)

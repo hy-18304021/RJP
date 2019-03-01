@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 import database.QueryTest;
-import get.Threadpage;
+import magcap.Threadpage;
 
 public class AllThreadServlet extends HttpServlet{
 	
@@ -17,10 +17,10 @@ public class AllThreadServlet extends HttpServlet{
 		req.setCharacterEncoding("Windows-31J");
 		
 		//データベースからリストをもらいたい
-		List<Threadpage> plist=getList();
+		List<Threadpage> threadlist=getList();
 		
 		//パラメータをJSPに転送したい↓
-		req.setAttribute("threadindex",plist);
+		req.setAttribute("threadindex",threadlist);
 		
 		//転送先のJSPを指定
 		RequestDispatcher dis=req.getRequestDispatcher("/SetAllThread");
@@ -36,10 +36,10 @@ public class AllThreadServlet extends HttpServlet{
 	}
 	
 	public List<Threadpage> getList(){
-		List<Threadpage> plist=QueryTest.getThreadList();
+		List<Threadpage> threadlist=QueryTest.getThreadList();
 		
 		
-		return plist;
+		return threadlist;
 	}
 	
 }
