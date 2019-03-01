@@ -43,29 +43,24 @@
 <body>
 <center><table width="800px" bgcolor="#000000" cellspacing="1" cellpadding="5"><tbody><tr><td bgcolor="#aaaaaa" align="center">‚±‚±‚Íi‹‰‚Ì‚½‚ß‚ÌŒf¦”Â‚Å‚·B<br>
 <br>
-<b>yŒf¦”Â—˜—p‹K–ñz</b>
-
-<b></b><br>
-<center></center>
+<h1>y${resindx[0].thread_Name}z</h1>
 <br>
-<font color="#FF0000"><br>
 
 <script type="text/javascript" src="./Œf¦”Â–¼_files/analyze.js.ƒ_ƒEƒ“ƒ[ƒh" charset="utf-8"></script>
 </center></td>
-<form var="Title" items="${title}" method="Post" action ='titlehyoji'> 
-        ${Title.thread_Name}<br>
-    </form>
+
+
 
 <c:forEach var="res" items="${resindx}"> 
     <table>
       <tr class="td">
-       <td>${res.res_Number}</td><td>${res.res_Cont_Time}</td>
+       <td>${res.res_Number}</td><td>${res.res_Time}</td>
        <td>${res.res_Con}</td>
       </tr>
       </c:forEach>
     </table>
 
-	<from method='Post' action='Resservlet'>
+  <form id="bbsform"  method='Post' action='Resservlet'>
     <table border="0">
      <tbody>
      <tr>
@@ -75,6 +70,7 @@
      </tr>
      <tr>
       <td colspan="2" align="center">
+		<input type="hidden" name="thread_Name" value="${resindx[0].thread_Name}">
 		<input class="button" type='submit' value="“Še">
 		<input class="button" type='reset' value="ƒŠƒZƒbƒg">
      </tr>

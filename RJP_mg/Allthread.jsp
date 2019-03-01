@@ -42,12 +42,7 @@
 <body>
 <center><table width="800px" bgcolor="#000000" cellspacing="1" cellpadding="5"><tbody><tr><td bgcolor="#aaaaaa" align="center">ここは進級のための掲示板です。<br>
 <br>
-<b>【掲示板利用規約】</b>
-
-<b></b><br>
-<center></center>
-<br>
-<font color="#FF0000"><br>
+<h2>【スレッド一覧】</h2><br>
 
 <script type="text/javascript" src="./掲示板名_files/analyze.js.ダウンロード" charset="utf-8"></script>
 </font></td></tr></tbody></table><br></center>
@@ -67,7 +62,7 @@
      <table width="100%" cellpadding="4" cellspacing="1">
       <tbody>
       <tr class="th">
-       <th><span class="subj">タイトル</span></th>
+       <th><span class="subj">スレッド名</span></th>
        <th><span class="subj">件数</span></th>
        <th><span class="subj">作成日時</span></th>
        <th><span class="subj">最終更新日時</span></th>

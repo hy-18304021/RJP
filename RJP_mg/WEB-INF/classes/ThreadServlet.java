@@ -24,16 +24,6 @@ public class ThreadServlet extends HttpServlet{
 		
 		System.out.println("受け取り成功");
 		
-		if(title==null||title.length()==0){
-			System.out.println("タイトルfalse");
-			RequestDispatcher dis1=req.getRequestDispatcher("/Topp");
-			dis1.forward(req,res);
-		}
-		if(new_res==null||new_res.length()==0){
-			System.out.println("レスfalse");
-			RequestDispatcher dis2=req.getRequestDispatcher("/Topp");
-			dis2.forward(req,res);
-		}
 		InsertTest.insertThread(title,new_res);
 		
 		System.out.println("成功");
@@ -50,12 +40,6 @@ public class ThreadServlet extends HttpServlet{
 	
 	public void doGet(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
-	}
-	
-	public List<Threadpage> getList(){
-		List<Threadpage> plist=QueryTest.getThreadList();
-		
-		return plist;
 	}
 	
 }

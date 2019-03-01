@@ -19,17 +19,15 @@ public class ResServlet extends HttpServlet{
  		req.setCharacterEncoding("Windows-31J");
 		
 		//スレッドの名前を受け取る
-		String title=req.getParameter("");
+		String title=req.getParameter("thread_Name");
 		
 		
 		//レスの作成
-		String new_res=req.getParameter("res");
+		String new_res=req.getParameter("Res");
 		
-		if(new_res==null||new_res.length()==0){
-			System.out.println("レスfalse");
-		}
 		
 		InsertTest.insertRes(title,new_res);
+		
 		//転送先のJSPを指定
 		RequestDispatcher dis=req.getRequestDispatcher("/Thread");
 		

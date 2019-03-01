@@ -25,8 +25,8 @@ public class InsertTest{
 			System.out.println("接続完了");
 			
 			//SQL文を変数に格納する
-			String sql="insert into thread_table(res_id,thread_name) values(s_thread_number.nextval,'"+title+"')";
-			String sql2="insert into res_table(res_id,thread_name,res_con) values(s_res_number.nextval,'"+title+"','"+res+"')";
+			String sql="insert into thread_table(thread_name) values('"+title+"')";
+			String sql2="insert into res_table(thread_name,res_con) values('"+title+"','"+res+"')";
 			
 			//Statementインターフェイスを実装するクラスの
 			//インスタンスを取得する
@@ -75,7 +75,8 @@ public class InsertTest{
 			System.out.println("接続完了");
 			
 			//SQL文を変数に格納する
-			String sql="insert into res_table(res_id,thread_name,res_con) values(s_res_id.nextval,'"+title+"','"+res+"',)";
+			String sql="insert into res_table(thread_name,res_con) values('"+title+"','"+res+"')";
+			String sql2="update thread_table set thread_update_time=sysdate";
 			
 			//Statementインターフェイスを実装するクラスの
 			//インスタンスを取得する
@@ -83,6 +84,7 @@ public class InsertTest{
 			
 			//SQLを実行しトランザクションが開始される。処理件数が返される
 			count=st.executeUpdate(sql);
+			count=st.executeUpdate(sql2);
 			
 			System.out.println(count+"件処理完了");
 			

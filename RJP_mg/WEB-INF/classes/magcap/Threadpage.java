@@ -3,7 +3,6 @@ package magcap;
 
 public class Threadpage{
 	private String thread_Number;
-	private String res_Id="";
 	private String thread_Name="";
 	private String thread_Create_Time="";
 	private String thread_Update_Time="";
@@ -12,9 +11,6 @@ public class Threadpage{
 		this.thread_Number=thread_Number;
 	}
 	
-	public void setRes_Id(String res_Id){
-		this.res_Id=res_Id;
-	}
 	
 	public void setThread_Name(String thread_Name){
 		this.thread_Name=thread_Name;
@@ -32,9 +28,6 @@ public class Threadpage{
 		return thread_Number;
 	}
 	
-	public String getRes_Id(){
-		return res_Id;
-	}
 	
 	public String getThread_Name(){
 		return thread_Name;

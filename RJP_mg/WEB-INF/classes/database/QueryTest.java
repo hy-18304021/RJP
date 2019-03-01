@@ -40,7 +40,7 @@ public class QueryTest{
 			
 			//select文
 			String sql=
-			"select thread_name,count(res_id),thread_create_time,thread_update_time from thread_table GROUP BY thread_name,thread_create_time,thread_update_time";
+			"select thread_name,thread_create_time,MAX(thread_update_time) from thread_table GROUP BY thread_name,thread_create_time";
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();
@@ -55,19 +55,17 @@ public class QueryTest{
 				Threadpage threadpage = new Threadpage();
 				
 				String Thread_Name = rs.getString(1);	//1列目のデータを取得
-				String Res_Id = rs.getString(2);	//2列目のデータを取得
-				String Thread_Create_Time = rs.getString(3);	//3列目のデータを取得
-				String Thread_Update_Time = rs.getString(4);	//4列目のデータを取得
+				String Thread_Create_Time = rs.getString(2);	//2列目のデータを取得
+				String Thread_Update_Time = rs.getString(3);	//3列目のデータを取得
 				
 				threadpage.setThread_Name(Thread_Name);
-				threadpage.setRes_Id(Res_Id);
 				threadpage.setThread_Create_Time(Thread_Create_Time);
 				threadpage.setThread_Update_Time(Thread_Update_Time);
 				
 				threadList.add(threadpage);
 				
 				//System.out.println("thread_name"+"\t"+"res_id"+"\t"+"create_time"+"\t"+"update_time"); //確認表示
-				System.out.println(Thread_Name+"\t"+Res_Id+"\t"+Thread_Create_Time+"\t"+Thread_Update_Time);				//確認その２
+				System.out.println(Thread_Name+"\t"+Thread_Create_Time+"\t"+Thread_Update_Time);				//確認その２
 			}
 
 			
@@ -102,7 +100,7 @@ public class QueryTest{
 			System.out.println("接続完了");
 			
 			//select文
-			String sql="select res_number,res_cont_time,res_con from res_table where thread_name='"+id+"'";
+			String sql="select res_number,res_time,res_con,thread_name from res_table where thread_name='"+id+"'";
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();
@@ -117,16 +115,18 @@ public class QueryTest{
 				ResClreate res = new ResClreate();
 				
 				int number = rs.getInt(1);	//1列目のデータを取得
-				String time = rs.getString(2);	//1列目のデータを取得
-				String name = rs.getString(3);	//1列目のデータを取得
+				String time = rs.getString(2);	//2列目のデータを取得
+				String con = rs.getString(3);	//3列目のデータを取得
+				String name = rs.getString(4);	//3列目のデータを取得
 				res.setRes_Number(number);
-				res.setRes_Cont_Time(time);
-				res.setRes_Con(name);
+				res.setRes_Time(time);
+				res.setRes_Con(con);
+				res.setThread_Name(name);
 				
 				resList.add(res);
 				
 				//System.out.println("username"+"\t"+"password"); //確認表示
-				System.out.println(number+"\t"+time+"\t"+name);				//確認その２
+				System.out.println(number+"\t"+time+"\t"+con+"\t"+name);				//確認その２
 			}
 
 			
