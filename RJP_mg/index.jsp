@@ -14,10 +14,10 @@
   function check(){
     var flag = 0;
     // 設定開始（必須にする項目を設定してください）
-    if(document.form1.Thread_name.value == ""){ // 「お名前」の入力をチェック
+    if(document.form1.Thread_name.value == ""){ // 「スレッド名」の入力をチェック
       flag = 1;
     }
-    else if(document.form1.Res.value == ""){ // 「パスワード」の入力をチェック
+    else if(document.form1.Res.value == ""){ // 「レス」の入力をチェック
       flag = 1;
     }
     if(flag){
@@ -29,34 +29,8 @@
     }
   }
   </script>
- <link rel="stylesheet" href="./掲示板名_files/jlisting.css" type="text/css">
- <link rel="stylesheet" href="./掲示板名_files/745617.css" type="text/css">
- <link rel="alternate" type="application/rss+xml" title="rss" href="http://musouon.bbs.fc2.com/rss/">
- 
- <style type="text/css">
- <!--
- body {
-	margin: 0;
-	padding: 0;
 
- #change_mobile {
-	position: relative;
-	z-index: 1001;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 90px;
-	background-color: rgb(160, 180, 198);
-	border-top: 1px solid rgb(205, 213, 223);
-	border-bottom: 1px solid rgb(46, 55, 68);
- }
- #change_mobile_body {
-	text-align: center;
-	position: absolute;
-	width: 100%;
-	padding-top: 7px;
- }-->
- </style>
+ <link rel="stylesheet" type="text/css" href="index.jsp">
 
 </head>
 <body>
