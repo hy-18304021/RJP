@@ -51,15 +51,21 @@
  </div>
  
   <div class="formdayo"  align="center">
-  
-  <form class="inline_button" action="Topp"><br>
-   <input class="button" type="submit" value="トップページへ">
-  </form>
-  
 <br>
 <h1>【<font color="FF0000">${resindx[0].thread_Name}</font>】</h1>
 <br>
 
+	<div class ="button">
+		<form class="Tophe" action="Topp">
+			<input class="button" type="submit" value="トップページへ">
+		</form>
+	</div>
+	<div class ="button">
+		<form class="Threadhe" method="Post" action="AllThreadservlet"  >
+			<input class="button" type="submit" value="スレッド一覧へ">
+		</form>
+	</div>
+	
 </center></td>
 
 
