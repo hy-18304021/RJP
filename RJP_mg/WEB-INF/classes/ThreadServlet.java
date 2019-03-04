@@ -24,7 +24,20 @@ public class ThreadServlet extends HttpServlet{
 		
 		System.out.println("受け取り成功");
 		
-		InsertTest.insertThread(title,new_res);
+		String n_r="";	//ローカル変数を宣言、初期値を入れる
+		
+		while(true){	//無限ループにする
+			if(new_res.indexOf("\r\n")>=0){	//改行があった場合ifにはいる
+				n_r=new_res.replace("\r\n","<br>");	//ローカル変数にreplaceメソッドで置き換えた文字列を入れる
+				System.out.println(n_r+"aaaa");
+			}else{
+				n_r=new_res;	//改行がなければそのまま
+			}
+			break;
+		}
+		
+		
+		InsertTest.insertThread(title,n_r);
 		
 		System.out.println("成功");
 		

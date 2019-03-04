@@ -24,7 +24,19 @@ public class ResServlet extends HttpServlet{
 		//レスの作成
 		String new_res=req.getParameter("Res");
 		
-		InsertTest.insertRes(title,new_res);
+		String n_r="";	//ローカル変数を宣言、初期値を入れる
+		
+		while(true){	//無限ループにする
+			if(new_res.indexOf("\r\n")>=0){	//改行があった場合ifにはいる
+				n_r=new_res.replace("\r\n","<br>");	//ローカル変数にreplaceメソッドで置き換えた文字列を入れる
+				System.out.println(n_r+"aaaa");
+			}else{
+				n_r=new_res;	//改行がなければそのまま
+			}
+			break;
+		}
+		
+		InsertTest.insertRes(title,n_r);
 		
 		//データベースからリストをもらいたい
 		List<ResClreate> plist=getList(title);
