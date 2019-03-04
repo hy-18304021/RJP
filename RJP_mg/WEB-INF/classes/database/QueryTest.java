@@ -40,7 +40,7 @@ public class QueryTest{
 			
 			//select文
 			String sql=
-			"select thread_name,thread_create_time,thread_update_time from thread_table ORDER BY thread_create_time ASC";
+			"select thread_name,thread_create_time,thread_update_time from thread_table ORDER BY thread_update_time DESC";
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();
