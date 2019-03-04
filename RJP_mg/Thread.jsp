@@ -51,15 +51,21 @@
  </div>
  
   <div class="formdayo"  align="center">
-  
-  <form class="inline_button" action="Topp"><br>
-   <input class="button" type="submit" value="トップページへ">
-  </form>
-  
 <br>
 <h1>【<font color="FF0000">${resindx[0].thread_Name}</font>】</h1>
 <br>
 
+	<div class ="button">
+		<form class="Tophe" action="Topp">
+			<input class="button" type="submit" value="トップページへ">
+		</form>
+	</div>
+	<div class ="button">
+		<form class="Threadhe" method="Post" action="AllThreadservlet"  >
+			<input class="button" type="submit" value="スレッド一覧へ">
+		</form>
+	</div>
+	
 </center></td>
 
 
@@ -78,8 +84,7 @@
   <div class="topic2">
 
   <p class="subj">
-    <p class="res_date"><span class="date">${resindx[0].res_Time}</p>
-    <p class="msg">     <span class="lh12">${resindx[0].res_Con}</span>
+   <span class="subj">${resindx[0].thread_Name}</span>
 
 <!-- 
   </p>
@@ -88,7 +93,7 @@
   </p>
 -->
 
-<c:forEach var="res" items="${resindx}" begin="1">
+<c:forEach var="res" items="${resindx}">
    <div class="res">
     <p class="res_subj"><span class="subj">Re: ${resindx[0].thread_Name}</span>
     </p>
