@@ -1,5 +1,5 @@
 <%@ page pageEncoding="Windows-31J"
- contentType="text/html;charset=Windows-31J" %>
+	contentType="text/html;charset=Windows-31J" %>
 
 <%--JSTL 1.1.2 core タグライブラリ--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -54,37 +54,36 @@
 <h1>【<font color="FF0000">${resindx[0].thread_Name}</font>】</h1>
 <br>
 
- <div class ="button">
-  <form class="Tophe" action="Topp">
-   <input class="button" type="submit" value="トップページへ">
-  </form>
- </div>
- <div class ="button">
-  <form class="Threadhe" method="Post" action="AllThreadservlet"  >
-   <input class="button" type="submit" value="スレッド一覧へ">
-  </form>
- </div>
- 
+	<div class ="button">
+		<form class="Tophe" action="Topp">
+			<input class="button" type="submit" value="トップページへ">
+		</form>
+	</div>
+	<div class ="button">
+		<form class="Threadhe" method="Post" action="AllThreadservlet"  >
+			<input class="button" type="submit" value="スレッド一覧へ">
+		</form>
+	</div>
+	
 </center></td>
 
 
 <!--
- <c:forEach var="res" items="${resindx}"> 
-     <table>
-       <tr class="td">
-        <td>${res.res_Time}</td>
-        <td>${res.res_Con}</td>
-       </tr>
-       </c:forEach>
-     </table>
+	<c:forEach var="res" items="${resindx}"> 
+	    <table>
+	      <tr class="td">
+	       <td>${res.res_Time}</td>
+	       <td>${res.res_Con}</td>
+	      </tr>
+	      </c:forEach>
+	    </table>
 -->
 
   <div class="topic">
   <div class="topic2">
 
   <p class="subj">
-    <p class="res_date"><span class="date">${resindx[0].res_Time}</p>
-    <p class="msg">     <span class="lh12">${resindx[0].res_Con}</span>
+   <span class="subj">${resindx[0].thread_Name}</span>
 
 <!-- 
   </p>
@@ -93,7 +92,7 @@
   </p>
 -->
 
-<c:forEach var="res" items="${resindx}" begin="1">
+<c:forEach var="res" items="${resindx}">
    <div class="res">
     <p class="res_subj"><span class="subj">Re: ${resindx[0].thread_Name}</span>
     </p>
@@ -122,11 +121,11 @@
      </tr>
      <tr>
       <td colspan="2" align="center">
-  <input type="hidden" name="thread_Name" value="${resindx[0].thread_Name}">
-  <input class="button" type='submit' value="投稿" name="form1" onSubmit="return check()>
-  <input class="button" type='reset' value="リセット">
+		<input type="hidden" name="thread_Name" value="${resindx[0].thread_Name}">
+		<input class="button" type='submit' value="投稿" name="form1" onSubmit="return check()>
+		<input class="button" type='reset' value="リセット">
      </tr>
- </td>
+	</td>
     </tbody></table>
   </form>
   
