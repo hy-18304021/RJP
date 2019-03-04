@@ -35,12 +35,12 @@ public class QueryTest{
 
 			//Oracleに接続する
 			Connection cn=
-				DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","tuser","pass");
+				DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","maguser","maguser");
 			System.out.println("接続完了");
 			
 			//select文
 			String sql=
-			"select thread_name,thread_create_time,MAX(thread_update_time) from thread_table GROUP BY thread_name,thread_create_time";
+			"select thread_name,thread_create_time,thread_update_time from thread_table ORDER BY thread_create_time ASC";
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();
@@ -96,11 +96,11 @@ public class QueryTest{
 
 			//Oracleに接続する
 			Connection cn=
-				DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","tuser","pass");
+				DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","maguser","maguser");
 			System.out.println("接続完了");
 			
 			//select文
-			String sql="select res_time,res_con,thread_name from res_table where thread_name='"+id+"'";
+			String sql="select TO_CHAR(res_time,'YYYY-MM-DD HH24:MI:SS'),res_con,thread_name from res_table where thread_name='"+id+"' ORDER BY res_time ASC";
 
 			//Statementインターフェイスを実装するクラスをインスタンス化する
 			Statement st=cn.createStatement();

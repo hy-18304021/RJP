@@ -78,7 +78,8 @@
   <div class="topic2">
 
   <p class="subj">
-   <span class="subj">${resindx[0].thread_Name}</span>
+    <p class="res_date"><span class="date">${resindx[0].res_Time}</p>
+    <p class="msg">     <span class="lh12">${resindx[0].res_Con}</span>
 
 <!-- 
   </p>
@@ -87,7 +88,7 @@
   </p>
 -->
 
-<c:forEach var="res" items="${resindx}">
+<c:forEach var="res" items="${resindx}" begin="1">
    <div class="res">
     <p class="res_subj"><span class="subj">Re: ${resindx[0].thread_Name}</span>
     </p>
