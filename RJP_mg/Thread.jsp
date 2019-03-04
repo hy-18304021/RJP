@@ -6,49 +6,124 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <!-- saved from url=(0027)http://musouon.bbs.fc2.com/ -->
-<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="ja">
+
+<head>
+
+<meta http-equiv="Content-Type" content="Thread/jsp; charset=UTF-8">
  
- <meta http-equiv="content-style-type" content="text/css">
- <title>掲示板名</title>
- <link rel="stylesheet" type="text/css" href="index.jsp">
+ <meta http-equiv="content-style-type" content="CSS/index.css">
+ 
+ <title>掲示板マグカップ</title>
+ 
+  <script type="text/javascript"> 
+  <!-- 
+  function check(){
+    var flag = 0;
+    // 設定開始（必須にする項目を設定してください）
+    if(document.form1.Res.value == ""){ // 「レス」の入力をチェック
+      flag = 1;
+    }
+    if(flag){
+      window.alert('必須項目に未入力がありました'); // 入力漏れがあれば警告ダイアログを表示
+      return false; // 送信を中止
+    }
+    else{
+      return true; // 送信を実行
+    }
+  }
+  </script>
+
+ <link rel="shortcut icon" href="CSS/mug_favi.ico">
+
+ <link rel="stylesheet"href="CSS/index.css">
 
 </head>
+
 <body>
-<center><table width="800px" bgcolor="#000000" cellspacing="1" cellpadding="5"><tbody><tr><td bgcolor="#aaaaaa" align="center">ここは進級のための掲示板です。<br>
+
+ <div  align="center">
+
+  <p id="title"></p>
+
+  <a href="index.jsp"><img src="CSS/muglogo55.png"  align="middle" vspace="25"></a>
+  
+ </div>
+ 
+  <div class="formdayo"  align="center">
+  
+  <form class="inline_button" action="Topp"><br>
+   <input class="button" type="submit" value="トップページへ">
+  </form>
+  
 <br>
-<h1>【${resindx[0].thread_Name}】</h1>
+<h1>【<font color="FF0000">${resindx[0].thread_Name}</font>】</h1>
 <br>
 
-<script type="text/javascript" src="./掲示板名_files/analyze.js.ダウンロード" charset="utf-8"></script>
 </center></td>
 
 
+<!--
+	<c:forEach var="res" items="${resindx}"> 
+	    <table>
+	      <tr class="td">
+	       <td>${res.res_Time}</td>
+	       <td>${res.res_Con}</td>
+	      </tr>
+	      </c:forEach>
+	    </table>
+-->
 
-<c:forEach var="res" items="${resindx}"> 
-    <table>
-      <tr class="td">
-       <td>${res.res_Time}</td>
-       <td>${res.res_Con}</td>
-      </tr>
-      </c:forEach>
-    </table>
+  <div class="topic">
+  <div class="topic2">
 
-  <form id="bbsform"  method='Post' action='Resservlet'>
+  <p class="subj">
+   <span class="subj">${resindx[0].thread_Name}</span>
+
+<!-- 
+  </p>
+  <p class="date"><span class="date"></span></p>
+  <p class="msg">   <span class="lh12"></span>
+  </p>
+-->
+
+<c:forEach var="res" items="${resindx}">
+   <div class="res">
+    <p class="res_subj"><span class="subj">Re: ${resindx[0].thread_Name}</span>
+    </p>
+    <p class="res_date"><span class="date">${res.res_Time}</p>
+    <p class="msg">     <span class="lh12">${res.res_Con}</span>
+    </p>
+   </div>
+</c:forEach>
+   
+  </div>
+  </div>
+
+  <p id="bbsformtitle">新規レス投稿</p>
+  <form id="bbsform"  method='Post' action='Resservlet' name="form1" onSubmit="return check()">
     <table border="0">
      <tbody>
      <tr>
+      <td colspan="2">内容
+      </td>
+     </tr>
+     <tr>
       <td colspan="2">
        <textarea name='Res' rows="7" cols="48"></textarea>
+       
       </td>
      </tr>
      <tr>
       <td colspan="2" align="center">
 		<input type="hidden" name="thread_Name" value="${resindx[0].thread_Name}">
-		<input class="button" type='submit' value="投稿">
+		<input class="button" type='submit' value="投稿" name="form1" onSubmit="return check()>
 		<input class="button" type='reset' value="リセット">
      </tr>
 	</td>
     </tbody></table>
   </form>
+  
+  </div>
     </body>
     </html>
