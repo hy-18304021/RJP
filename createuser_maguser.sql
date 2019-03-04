@@ -8,9 +8,9 @@ sqlplus /nolog
 conn sys/orcl as sysdba
 
 create user maguser identified by maguser account unlock;
-grant dba to tuser;
+grant dba to maguser;
 
-conn maguser/magpass
+conn maguser/maguser
 
 show user
 

@@ -17,7 +17,7 @@ public class InsertTest{
 			//インスタンスを返す
 			Connection cn=
 				DriverManager.getConnection(
-					"jdbc:oracle:thin:@localhost:1521:orcl","tuser","pass");
+					"jdbc:oracle:thin:@localhost:1521:orcl","maguser","maguser");
 			
 			//自動コミットをOFFにする
 			cn.setAutoCommit(false);
@@ -67,7 +67,7 @@ public class InsertTest{
 			//インスタンスを返す
 			Connection cn=
 				DriverManager.getConnection(
-					"jdbc:oracle:thin:@localhost:1521:orcl","tuser","pass");
+					"jdbc:oracle:thin:@localhost:1521:orcl","maguser","maguser");
 			
 			//自動コミットをOFFにする
 			cn.setAutoCommit(false);
@@ -76,7 +76,7 @@ public class InsertTest{
 			
 			//SQL文を変数に格納する
 			String sql="insert into res_table(thread_name,res_con) values('"+title+"','"+res+"')";
-			String sql2="update thread_table set thread_update_time=sysdate";
+			String sql2="update thread_table set thread_update_time=sysdate where thread_name='"+title+"'";
 			
 			//Statementインターフェイスを実装するクラスの
 			//インスタンスを取得する

@@ -2,7 +2,7 @@
 Userì¬Ï‚İ‘O’ñ
 ***********************************/
 
-conn maguser/magpass
+conn maguser/maguser
 
 drop table res_table;
 drop table thread_table;
