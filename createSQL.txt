@@ -1,6 +1,9 @@
-/***********************************
-Userì¬Ï‚İ‘O’ñ
-***********************************/
+sqlplus /nolog
+
+conn sys/orcl as sysdba
+
+create user maguser identified by maguser account unlock;
+grant dba to maguser;
 
 conn maguser/maguser
 
@@ -26,6 +29,4 @@ create table res_table(
 CREATE SEQUENCE s_thread_number START WITH 1 INCREMENT BY 1;
 
 commit;
-
-
 
