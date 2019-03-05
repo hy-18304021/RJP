@@ -11,25 +11,24 @@
 	<meta http-equiv="Content-Type" content="index/jsp; charset=UTF-8">
 	<meta http-equiv="content-style-type" content="CSS/index.css">
 	<title>掲示板マグカップ</title>
-  <script type="text/javascript"> 
-  <!-- 
-  function check(){
-    var flag = 0;
-    // 設定開始（必須にする項目を設定してください）
-    if(document.form1.Thread_name.value == ""){ // 「スレッド名」の入力をチェック
-      flag = 1;
-    }
-    else if(document.form1.Res.value == ""){ // 「レス」の入力をチェック
-      flag = 1;
-    }
-    if(flag){
-      window.alert('必須項目に未入力がありました'); // 入力漏れがあれば警告ダイアログを表示
-      return false; // 送信を中止
-    }
-    else{
-      return true; // 送信を実行
-    }
-  }
+	<script type="text/javascript"> 
+		function check(){
+			var flag = 0;
+			// 設定開始（必須にする項目を設定してください）
+			if(document.form1.Thread_name.value == ""){ // 「スレッド名」の入力をチェック
+				flag = 1;
+			}
+			else if(document.form1.Res.value == ""){ // 「レス」の入力をチェック
+				flag = 1;
+			}
+			if(flag){
+				window.alert('必須項目に未入力がありました'); // 入力漏れがあれば警告ダイアログを表示
+				return false; // 送信を中止
+			}
+				else{
+				return true; // 送信を実行
+			}
+		}
   </script>
 
 	<link rel="shortcut icon" href="CSS/mug_favi.ico">
