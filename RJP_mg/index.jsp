@@ -6,13 +6,11 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang="ja">
+
 <head>
-<meta http-equiv="Content-Type" content="index/jsp; charset=UTF-8">
- 
- <meta http-equiv="content-style-type" content="CSS/index.css">
- 
- <title>掲示板マグカップ</title>
- 
+	<meta http-equiv="Content-Type" content="index/jsp; charset=UTF-8">
+	<meta http-equiv="content-style-type" content="CSS/index.css">
+	<title>掲示板マグカップ</title>
   <script type="text/javascript"> 
   <!-- 
   function check(){
@@ -34,55 +32,43 @@
   }
   </script>
 
- <link rel="shortcut icon" href="CSS/mug_favi.ico">
-
- <link rel="stylesheet"href="CSS/index.css">
-
+	<link rel="shortcut icon" href="CSS/mug_favi.ico">
+	<link rel="stylesheet"href="CSS/index.css">
 </head>
 
 <body>
-
- <div  align="center">
-
-  <p id="title"></p>
-
-  <a href="index.jsp"><img src="CSS/muglogo55.png"  align="middle" vspace="25"></a>
-  
- </div>
- 
- <div class="formdayo"  align="center">
- 
-  <form class="inline_button" method="Post" action="AllThreadservlet"><br>
-   <input class="button" type="submit" value="スレッド一覧へ">
-  </form>
-
-  <p id="bbsformtitle">新規スレッド作成</p>
-  <form id="bbsform"  method='Post' action='Threadservlet' name="form1" onSubmit="return check()">
-    <table border="0">
-     <tbody>
-     <tr>
-      <td nowrap>件名</td>
-      <td><input type="text" name='Thread_name' size="30"></td>
-     </tr>
-     <tr>
-      <td colspan="2">内容
-      </td>
-     </tr>
-     <tr>
-      <td colspan="2">
-       <textarea name='Res' rows="7" cols="48"></textarea>
-      </td>
-     </tr>
-     <tr>
-      <td colspan="2" align="center">
-		<input class="button" type='submit' value="投稿" name="form1" onSubmit="return check()>
-		<input class="button" type='reset' value="リセット">
-     </tr>
-	</td>
-    </tbody>
-  </table>
-  </form>
-
- </div>
+	<div  align="center">
+		<p id="title"></p>
+		<a href="index.jsp"><img src="CSS/muglogo55.png"  align="middle" vspace="25"></a>
+	</div>
+	<div class="formdayo"  align="center">
+		<form class="inline_button" method="Post" action="AllThreadservlet"><br>
+			<input class="button" type="submit" value="スレッド一覧へ">
+		</form>
+		<p id="bbsformtitle">新規スレッド作成</p>
+		<form id="bbsform"  method='Post' action='Threadservlet' name="form1" onSubmit="return check()">
+			<table border="0">
+				<tbody>
+					<tr>
+						<td nowrap>件名</td>
+						<td><input type="text" name='Thread_name' size="30"></td>
+					</tr>
+					<tr>
+						<td colspan="2">内容</td>
+					</tr>
+					<tr>
+						<td colspan="2"><textarea name='Res' rows="7" cols="48"></textarea></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+						<input class="button" type='submit' value="投稿" name="form1" onSubmit="return check()>
+						<input class="button" type='reset' value="リセット">
+					</td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
 </body>
+
 </html>
